@@ -1,8 +1,6 @@
 ### B站视频：
 [FPGA图像处理中二值算子的一些妙用](https://www.bilibili.com/video/BV1WY411L7Bd) 这个视频有介绍“无限次元”这个代码实现的一些功能
 
-[连通域标记算法FPGA流水线实现思路-无需DDR缓存图像](https://www.bilibili.com/video/BV1c94y1Z7dV) 这个不开源
-
 [手写Verilog用FPGA实现实时图像卷积，用Block Ram缓存图像](https://www.bilibili.com/video/BV1B3411W7Ht) 这个代码“Verilog”里有
 
 
