@@ -1,6 +1,7 @@
 ﻿//無限次元:https://space.bilibili.com/2139404925
 //本代码来自:https://github.com/becomequantum/Kryon
 global using System.Drawing.Imaging;
+using System.Numerics;
 
 namespace 图像处理;
 
@@ -25,7 +26,10 @@ public partial class 图像 {
     static public bool 点在框内(Point 点坐标, Rectangle 框, int X缩减 = 0, int Y缩减 = 0) {
         return 点在框内(点坐标.X, 点坐标.Y, new Rectangle(框.X + X缩减, 框.Y + Y缩减, 框.Width - X缩减 * 2, 框.Height - Y缩减 * 2));
     }
-    static public bool 点在框内(int x, int y, Rectangle 框) {
+    static public bool 点在框内(Vector2 点, Rectangle 框) {
+        return 点在框内(点.X, 点.Y, 框);
+    }
+    static public bool 点在框内(float x, float y, Rectangle 框) {
         return x >= 框.X && x < 框.X + 框.Width && y >= 框.Y && y < 框.Y + 框.Height;
     }
     internal static void 获取HSI_RGB谱 (Bitmap 位图, int[] R谱, int[] G谱, int[] B谱, int[] H谱, int[] S谱, int[] L谱, int[,] HS谱, bool HSL = true) {
@@ -506,17 +510,22 @@ public partial class 图像 {
 
 public class 参数 {
     static public PixelFormat 像素格式 = PixelFormat.Format24bppRgb;
-    static public int 宽, 高;
+    static public int 宽, 高, 笔粗细 = 1, 算子直径 = 3, 胀蚀阈值;
     static public Color 颜色;
     static public double 红比例, 绿比例, 蓝比例;
-    static public double W, b;                     //double竟然比float算的快!
+    static public double W, b;
     static public Color HSL上限 = Color.FromArgb(160, 240, 240);
     static public Color HSL下限 = Color.FromArgb(140, 0, 0);
     static public bool H使能 = true, S使能 = false, L使能 = false;
     static public bool 显示连通域标记过程 = false;
-    static public int 算子直径 = 3, 胀蚀阈值;
-    static public (bool 线,bool 黑) 显示 = (false,false);
+    static public (bool 黑, bool ALSD) 显示 = (false, false);
     
 }
 
-
+public struct 线段信息 {
+    public Vector2 起, 终;
+    public 线段信息(Vector2 起点, Vector2 终点) {
+        起 = 起点;
+        终 = 终点;
+    }
+}//存放线段识别的结果

@@ -10,13 +10,12 @@ using System.Text.RegularExpressions;
 namespace 无限次元;
 public partial class 无限主窗体 : Form {
     高精度计时 计时器 = new();
-    图片页 当前图片页;
-    图片页 上个图片页;
+    图片页 当前图片页, 上个图片页;
     int 缩放倍数 = 4;
     Action 刷新图片;
     UserActivityHook 键鼠监听钩子;
 
-    unsafe public 无限主窗体() {
+    public 无限主窗体() {
         InitializeComponent();
         图片页.局部放大控件 = 局部放大图1;
         图片页.功能页 = 功能标签页1;
@@ -26,19 +25,14 @@ public partial class 无限主窗体 : Form {
         键鼠监听钩子.OnMouseActivity += 键鼠监听钩子_OnMouseActivity;
     }
 
-    
-
-    private void 内容结果框_TextChanged(object sender, EventArgs e) {
-        ((RichTextBox)sender).Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
-    }
-
-    private void 添加新图片页(Bitmap 位图, string 文件名, ImageFormat 图片格式 = null) {
-        if (位图 == null) return;
+    private 图片页 添加新图片页(Bitmap 位图, string 文件名, ImageFormat 图片格式 = null, string LSD文件名 = null) {
+        if (位图 == null) return null;
         图片页 新图片页 = new(位图, 文件名, 图片右键菜单, 缩略图片框, 图片格式);
+        if (File.Exists(LSD文件名)) 新图片页.加载线段数据(LSD文件名);
         新图片页.图片框.MouseDoubleClick += 图片框_MouseDoubleClick;
         主标签页.Controls.Add(新图片页);
         主标签页.SelectedTab = 新图片页;
-        
+        return 新图片页;
     }
 
     private void 刷新当前图片() {
@@ -80,7 +74,7 @@ public partial class 无限主窗体 : Form {
             if (WindowState != FormWindowState.Maximized) WindowState = FormWindowState.Maximized;
             当前图片页.图片缩放(缩放增量 * 缩放倍数 / 2, true);
         }
-    }//滚轮
+    }//滚轮放大
     private void 无限主窗体_KeyDown(object sender, KeyEventArgs e) {
         if (当前图片页 == null || ActiveForm != this) return;
         Point 增量 = new (0, 0);
@@ -128,10 +122,10 @@ public partial class 无限主窗体 : Form {
         计时开始();
         foreach (var 文件名 in 图片文件) {
             Bitmap 位图 = 文件.加载图片文件(文件名, out ImageFormat 图片格式);
-            添加新图片页(位图, 文件名, 图片格式);
+            string LSD文件名 = Path.GetDirectoryName(文件名) + "\\" + Path.GetFileNameWithoutExtension(文件名) + ".lsd";
+            图片页 新图片页 = 添加新图片页(位图, 文件名, 图片格式, LSD文件名);
         }
         计时结束();
-        
     }
 
     private void 覆盖原图ToolStripMenuItem_Click(object sender, EventArgs e) {
@@ -263,7 +257,7 @@ public partial class 无限主窗体 : Form {
             图像.Sobel(当前图片页.图数据.位图);
             计时结束((Button)sender);
         }
-        else if (功能 == "递归连通" || 功能 == "逐行连通") {
+        else if (功能 == "递归连通") {
             计时开始((Button)sender);
             图像.连通域识别(当前图片页.图数据.位图, 刷新图片);
             计时结束((Button)sender);
@@ -271,9 +265,6 @@ public partial class 无限主窗体 : Form {
         else if (功能 == "测试") {
             计时开始((Button)sender);
             计时结束((Button)sender);
-        }
-        else if (功能 == "清空细线") {
-            当前图片页.清空放大图细线();
         }
         else if (功能 == "数点") {
             图像.总点数 = 0;
@@ -319,13 +310,11 @@ public partial class 无限主窗体 : Form {
     }
     private void 功能标签页1_显示RGB点击(object sender, EventArgs e) {
         if (当前图片页 == null) return;
-        int 缩放比 = 25;
+        int 缩放比 = 7;
         CheckBox checkBox = (CheckBox)sender;
-        if (checkBox.Name == "显示波形") 缩放比 = 5;
-        else if (checkBox.Name == "显示细线") 缩放比 = 13;
-        if (当前图片页.缩放比例 < 5 && checkBox.Checked) 当前图片页.图片缩放(缩放比 - (int)当前图片页.缩放比例);
+        if (当前图片页.缩放比例 < 2 && checkBox.Checked && checkBox.Name == "显示边线") 当前图片页.图片缩放(缩放比 - (int)当前图片页.缩放比例);
         else 当前图片页.刷新();
-    }//放大图上显示差值,波形等
+    }//放大图上显示边缘线条识别结果
 
     #endregion
 

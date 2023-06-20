@@ -25,1218 +25,1176 @@ namespace 控件 {
         /// 使用代码编辑器修改此方法的内容。
         /// </summary>
         private void InitializeComponent() {
-            this.components = new System.ComponentModel.Container();
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(功能标签页));
-            this.切换工具栏 = new System.Windows.Forms.ToolStrip();
-            this.图像处理按钮 = new System.Windows.Forms.ToolStripButton();
-            this.神经网络按钮 = new System.Windows.Forms.ToolStripButton();
-            this.Wb选值 = new System.Windows.Forms.ComboBox();
-            this.点运算参数 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
-            this.W值 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripLabel6 = new System.Windows.Forms.ToolStripLabel();
-            this.Bias值 = new System.Windows.Forms.ToolStripTextBox();
-            this.随机刷按钮 = new System.Windows.Forms.Button();
-            this.增益参数 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
-            this.R比例 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.G比例 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.B比例 = new System.Windows.Forms.ToolStripTextBox();
-            this.RGB参数 = new System.Windows.Forms.ToolStrip();
-            this.RGB标签 = new System.Windows.Forms.ToolStripLabel();
-            this.R值 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.G值 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.B值 = new System.Windows.Forms.ToolStripTextBox();
-            this.选色按钮 = new System.Windows.Forms.ToolStripButton();
-            this.宽高参数 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.图宽 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.图高 = new System.Windows.Forms.ToolStripTextBox();
-            this.位宽选择 = new System.Windows.Forms.ToolStripSplitButton();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.刷空图按钮 = new System.Windows.Forms.Button();
-            this.神经网络panel = new System.Windows.Forms.Panel();
-            this.Mnist查看按钮 = new System.Windows.Forms.Button();
-            this.读Yolo标签按钮 = new System.Windows.Forms.Button();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.点运算按钮 = new System.Windows.Forms.Button();
-            this.转灰度按钮 = new System.Windows.Forms.Button();
-            this.变透明按钮 = new System.Windows.Forms.Button();
-            this.变RAW按钮 = new System.Windows.Forms.Button();
-            this.RGB增益按钮 = new System.Windows.Forms.Button();
-            this.二图相减按钮 = new System.Windows.Forms.Button();
-            this.画直方图按钮 = new System.Windows.Forms.Button();
-            this.直方图均衡化按钮 = new System.Windows.Forms.Button();
-            this.Canny按钮 = new System.Windows.Forms.Button();
-            this.Sobel按钮 = new System.Windows.Forms.Button();
-            this.标背景按钮 = new System.Windows.Forms.Button();
-            this.二值化按钮 = new System.Windows.Forms.Button();
-            this.递归连通按钮 = new System.Windows.Forms.Button();
-            this.是否显示过程 = new System.Windows.Forms.CheckBox();
-            this.阈值胀蚀按钮 = new System.Windows.Forms.Button();
-            this.取边缘按钮 = new System.Windows.Forms.Button();
-            this.H使能 = new System.Windows.Forms.CheckBox();
-            this.S使能 = new System.Windows.Forms.CheckBox();
-            this.L使能 = new System.Windows.Forms.CheckBox();
-            this.R转H按钮 = new System.Windows.Forms.Button();
-            this.H转R按钮 = new System.Windows.Forms.Button();
-            this.显示细线 = new System.Windows.Forms.CheckBox();
-            this.数点按钮 = new System.Windows.Forms.Button();
-            this.黑掉背景 = new System.Windows.Forms.CheckBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.测试按钮 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton画框擦 = new System.Windows.Forms.RadioButton();
-            this.radioButton擦 = new System.Windows.Forms.RadioButton();
-            this.radioButton圆 = new System.Windows.Forms.RadioButton();
-            this.radioButton矩形 = new System.Windows.Forms.RadioButton();
-            this.radioButton线 = new System.Windows.Forms.RadioButton();
-            this.radioButton点 = new System.Windows.Forms.RadioButton();
-            this.radioButton不画 = new System.Windows.Forms.RadioButton();
-            this.toolStrip3 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
-            this.算子直径 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripLabel7 = new System.Windows.Forms.ToolStripLabel();
-            this.胀蚀阈值 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.下限标签 = new System.Windows.Forms.ToolStripLabel();
-            this.H下 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.S下 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.L下 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.上限标签 = new System.Windows.Forms.ToolStripLabel();
-            this.H上 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.S上 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.L上 = new System.Windows.Forms.ToolStripTextBox();
-            this.切换工具栏.SuspendLayout();
-            this.点运算参数.SuspendLayout();
-            this.增益参数.SuspendLayout();
-            this.RGB参数.SuspendLayout();
-            this.宽高参数.SuspendLayout();
-            this.神经网络panel.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.toolStrip3.SuspendLayout();
-            this.toolStrip2.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
-            this.SuspendLayout();
+            切换工具栏 = new ToolStrip();
+            图像处理按钮 = new ToolStripButton();
+            神经网络按钮 = new ToolStripButton();
+            Wb选值 = new ComboBox();
+            点运算参数 = new ToolStrip();
+            toolStripLabel5 = new ToolStripLabel();
+            W值 = new ToolStripTextBox();
+            toolStripLabel6 = new ToolStripLabel();
+            Bias值 = new ToolStripTextBox();
+            随机刷按钮 = new Button();
+            增益参数 = new ToolStrip();
+            toolStripLabel4 = new ToolStripLabel();
+            R比例 = new ToolStripTextBox();
+            toolStripSeparator3 = new ToolStripSeparator();
+            G比例 = new ToolStripTextBox();
+            toolStripSeparator4 = new ToolStripSeparator();
+            B比例 = new ToolStripTextBox();
+            RGB参数 = new ToolStrip();
+            RGB标签 = new ToolStripLabel();
+            R值 = new ToolStripTextBox();
+            toolStripSeparator1 = new ToolStripSeparator();
+            G值 = new ToolStripTextBox();
+            toolStripSeparator2 = new ToolStripSeparator();
+            B值 = new ToolStripTextBox();
+            选色按钮 = new ToolStripButton();
+            宽高参数 = new ToolStrip();
+            toolStripLabel1 = new ToolStripLabel();
+            图宽 = new ToolStripTextBox();
+            toolStripLabel2 = new ToolStripLabel();
+            图高 = new ToolStripTextBox();
+            位宽选择 = new ToolStripSplitButton();
+            toolStripMenuItem2 = new ToolStripMenuItem();
+            toolStripMenuItem3 = new ToolStripMenuItem();
+            刷空图按钮 = new Button();
+            神经网络panel = new Panel();
+            Mnist查看按钮 = new Button();
+            读Yolo标签按钮 = new Button();
+            toolTip1 = new ToolTip(components);
+            点运算按钮 = new Button();
+            转灰度按钮 = new Button();
+            变透明按钮 = new Button();
+            变RAW按钮 = new Button();
+            RGB增益按钮 = new Button();
+            二图相减按钮 = new Button();
+            画直方图按钮 = new Button();
+            直方图均衡化按钮 = new Button();
+            Canny按钮 = new Button();
+            Sobel按钮 = new Button();
+            标背景按钮 = new Button();
+            二值化按钮 = new Button();
+            递归连通按钮 = new Button();
+            是否显示过程 = new CheckBox();
+            阈值胀蚀按钮 = new Button();
+            取边缘按钮 = new Button();
+            H使能 = new CheckBox();
+            S使能 = new CheckBox();
+            L使能 = new CheckBox();
+            R转H按钮 = new Button();
+            H转R按钮 = new Button();
+            显示边线 = new CheckBox();
+            数点按钮 = new Button();
+            黑掉背景 = new CheckBox();
+            笔粗细 = new TextBox();
+            panel1 = new Panel();
+            测试按钮 = new Button();
+            groupBox1 = new GroupBox();
+            radioButton画框擦 = new RadioButton();
+            radioButton擦 = new RadioButton();
+            radioButton圆 = new RadioButton();
+            radioButton矩形 = new RadioButton();
+            radioButton线 = new RadioButton();
+            radioButton点 = new RadioButton();
+            radioButton不画 = new RadioButton();
+            toolStrip3 = new ToolStrip();
+            toolStripLabel3 = new ToolStripLabel();
+            算子直径 = new ToolStripTextBox();
+            toolStripLabel7 = new ToolStripLabel();
+            胀蚀阈值 = new ToolStripTextBox();
+            toolStrip2 = new ToolStrip();
+            下限标签 = new ToolStripLabel();
+            H下 = new ToolStripTextBox();
+            toolStripSeparator7 = new ToolStripSeparator();
+            S下 = new ToolStripTextBox();
+            toolStripSeparator8 = new ToolStripSeparator();
+            L下 = new ToolStripTextBox();
+            toolStrip1 = new ToolStrip();
+            上限标签 = new ToolStripLabel();
+            H上 = new ToolStripTextBox();
+            toolStripSeparator5 = new ToolStripSeparator();
+            S上 = new ToolStripTextBox();
+            toolStripSeparator6 = new ToolStripSeparator();
+            L上 = new ToolStripTextBox();
+            切换工具栏.SuspendLayout();
+            点运算参数.SuspendLayout();
+            增益参数.SuspendLayout();
+            RGB参数.SuspendLayout();
+            宽高参数.SuspendLayout();
+            神经网络panel.SuspendLayout();
+            panel1.SuspendLayout();
+            groupBox1.SuspendLayout();
+            toolStrip3.SuspendLayout();
+            toolStrip2.SuspendLayout();
+            toolStrip1.SuspendLayout();
+            SuspendLayout();
             // 
             // 切换工具栏
             // 
-            this.切换工具栏.Dock = System.Windows.Forms.DockStyle.None;
-            this.切换工具栏.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.切换工具栏.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.图像处理按钮,
-            this.神经网络按钮});
-            this.切换工具栏.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table;
-            this.切换工具栏.Location = new System.Drawing.Point(0, 0);
-            this.切换工具栏.Name = "切换工具栏";
-            this.切换工具栏.Size = new System.Drawing.Size(70, 50);
-            this.切换工具栏.TabIndex = 0;
-            this.切换工具栏.Text = "toolStrip1";
+            切换工具栏.Dock = DockStyle.None;
+            切换工具栏.Font = new Font("微软雅黑", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            切换工具栏.Items.AddRange(new ToolStripItem[] { 图像处理按钮, 神经网络按钮 });
+            切换工具栏.LayoutStyle = ToolStripLayoutStyle.Table;
+            切换工具栏.Location = new Point(0, 0);
+            切换工具栏.Name = "切换工具栏";
+            切换工具栏.Size = new Size(70, 50);
+            切换工具栏.TabIndex = 0;
+            切换工具栏.Text = "toolStrip1";
             // 
             // 图像处理按钮
             // 
-            this.图像处理按钮.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.图像处理按钮.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.图像处理按钮.Image = ((System.Drawing.Image)(resources.GetObject("图像处理按钮.Image")));
-            this.图像处理按钮.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.图像处理按钮.Margin = new System.Windows.Forms.Padding(0);
-            this.图像处理按钮.Name = "图像处理按钮";
-            this.图像处理按钮.Size = new System.Drawing.Size(69, 23);
-            this.图像处理按钮.Text = "图像处理";
-            this.图像处理按钮.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.图像处理按钮.Click += new System.EventHandler(this.切换按钮_Click);
+            图像处理按钮.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            图像处理按钮.Font = new Font("微软雅黑", 10.5F, FontStyle.Bold, GraphicsUnit.Point);
+            图像处理按钮.Image = (Image)resources.GetObject("图像处理按钮.Image");
+            图像处理按钮.ImageTransparentColor = Color.Magenta;
+            图像处理按钮.Margin = new Padding(0);
+            图像处理按钮.Name = "图像处理按钮";
+            图像处理按钮.Size = new Size(69, 23);
+            图像处理按钮.Text = "图像处理";
+            图像处理按钮.TextAlign = ContentAlignment.TopCenter;
+            图像处理按钮.Click += 切换按钮_Click;
             // 
             // 神经网络按钮
             // 
-            this.神经网络按钮.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.神经网络按钮.Image = ((System.Drawing.Image)(resources.GetObject("神经网络按钮.Image")));
-            this.神经网络按钮.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.神经网络按钮.Name = "神经网络按钮";
-            this.神经网络按钮.Size = new System.Drawing.Size(69, 24);
-            this.神经网络按钮.Text = "神经网络";
-            this.神经网络按钮.Click += new System.EventHandler(this.切换按钮_Click);
+            神经网络按钮.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            神经网络按钮.Image = (Image)resources.GetObject("神经网络按钮.Image");
+            神经网络按钮.ImageTransparentColor = Color.Magenta;
+            神经网络按钮.Name = "神经网络按钮";
+            神经网络按钮.Size = new Size(69, 24);
+            神经网络按钮.Text = "神经网络";
+            神经网络按钮.Click += 切换按钮_Click;
             // 
             // Wb选值
             // 
-            this.Wb选值.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Wb选值.FormattingEnabled = true;
-            this.Wb选值.Items.AddRange(new object[] {
-            "-1 255",
-            "1.1 0",
-            "1.2 0",
-            "1.5 0",
-            "2.0 0",
-            "0.9 0",
-            "0.5 0",
-            "1.04 10",
-            "1.08 20",
-            ""});
-            this.Wb选值.Location = new System.Drawing.Point(483, 77);
-            this.Wb选值.Name = "Wb选值";
-            this.Wb选值.Size = new System.Drawing.Size(66, 25);
-            this.Wb选值.TabIndex = 9;
-            this.toolTip1.SetToolTip(this.Wb选值, "选择常用Wb值,-1,255为反色效果");
-            this.Wb选值.SelectedValueChanged += new System.EventHandler(this.Wb选值改变);
+            Wb选值.DropDownStyle = ComboBoxStyle.DropDownList;
+            Wb选值.FormattingEnabled = true;
+            Wb选值.Items.AddRange(new object[] { "-1 255", "1.1 0", "1.2 0", "1.5 0", "2.0 0", "0.9 0", "0.5 0", "1.04 10", "1.08 20", "" });
+            Wb选值.Location = new Point(483, 77);
+            Wb选值.Name = "Wb选值";
+            Wb选值.Size = new Size(66, 25);
+            Wb选值.TabIndex = 9;
+            toolTip1.SetToolTip(Wb选值, "选择常用Wb值,-1,255为反色效果");
+            Wb选值.SelectedValueChanged += Wb选值改变;
             // 
             // 点运算参数
             // 
-            this.点运算参数.AutoSize = false;
-            this.点运算参数.Dock = System.Windows.Forms.DockStyle.None;
-            this.点运算参数.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.点运算参数.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel5,
-            this.W值,
-            this.toolStripLabel6,
-            this.Bias值});
-            this.点运算参数.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
-            this.点运算参数.Location = new System.Drawing.Point(362, 78);
-            this.点运算参数.Name = "点运算参数";
-            this.点运算参数.Size = new System.Drawing.Size(118, 25);
-            this.点运算参数.TabIndex = 8;
-            this.点运算参数.Text = "toolStrip1";
+            点运算参数.AutoSize = false;
+            点运算参数.Dock = DockStyle.None;
+            点运算参数.Font = new Font("微软雅黑", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            点运算参数.Items.AddRange(new ToolStripItem[] { toolStripLabel5, W值, toolStripLabel6, Bias值 });
+            点运算参数.LayoutStyle = ToolStripLayoutStyle.Flow;
+            点运算参数.Location = new Point(362, 78);
+            点运算参数.Name = "点运算参数";
+            点运算参数.Size = new Size(118, 25);
+            点运算参数.TabIndex = 8;
+            点运算参数.Text = "toolStrip1";
             // 
             // toolStripLabel5
             // 
-            this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(23, 20);
-            this.toolStripLabel5.Text = "W";
-            this.toolStripLabel5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            toolStripLabel5.Name = "toolStripLabel5";
+            toolStripLabel5.Size = new Size(23, 20);
+            toolStripLabel5.Text = "W";
+            toolStripLabel5.TextAlign = ContentAlignment.BottomCenter;
             // 
             // W值
             // 
-            this.W值.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.W值.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.W值.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.W值.MaxLength = 5;
-            this.W值.Name = "W值";
-            this.W值.Size = new System.Drawing.Size(42, 22);
-            this.W值.Text = "-1.0";
-            this.W值.ToolTipText = "W值,乘";
+            W值.BorderStyle = BorderStyle.None;
+            W值.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            W值.ForeColor = SystemColors.ControlText;
+            W值.MaxLength = 5;
+            W值.Name = "W值";
+            W值.Size = new Size(42, 22);
+            W值.Text = "-1.0";
+            W值.ToolTipText = "W值,乘";
             // 
             // toolStripLabel6
             // 
-            this.toolStripLabel6.Name = "toolStripLabel6";
-            this.toolStripLabel6.Size = new System.Drawing.Size(18, 20);
-            this.toolStripLabel6.Text = "b";
+            toolStripLabel6.Name = "toolStripLabel6";
+            toolStripLabel6.Size = new Size(18, 20);
+            toolStripLabel6.Text = "b";
             // 
             // Bias值
             // 
-            this.Bias值.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Bias值.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Bias值.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Bias值.MaxLength = 3;
-            this.Bias值.Name = "Bias值";
-            this.Bias值.Size = new System.Drawing.Size(30, 22);
-            this.Bias值.Text = "255";
-            this.Bias值.ToolTipText = "b值,加";
+            Bias值.BorderStyle = BorderStyle.None;
+            Bias值.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Bias值.ForeColor = SystemColors.ControlText;
+            Bias值.MaxLength = 3;
+            Bias值.Name = "Bias值";
+            Bias值.Size = new Size(30, 22);
+            Bias值.Text = "255";
+            Bias值.ToolTipText = "b值,加";
             // 
             // 随机刷按钮
             // 
-            this.随机刷按钮.AutoSize = true;
-            this.随机刷按钮.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.随机刷按钮.Location = new System.Drawing.Point(300, 2);
-            this.随机刷按钮.Name = "随机刷按钮";
-            this.随机刷按钮.Size = new System.Drawing.Size(59, 24);
-            this.随机刷按钮.TabIndex = 7;
-            this.随机刷按钮.Text = "随机刷";
-            this.toolTip1.SetToolTip(this.随机刷按钮, "刷一张各点颜色值随机的位图");
-            this.随机刷按钮.UseVisualStyleBackColor = true;
-            this.随机刷按钮.Click += new System.EventHandler(this.图像处理按钮们_Click);
+            随机刷按钮.AutoSize = true;
+            随机刷按钮.Font = new Font("宋体", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            随机刷按钮.Location = new Point(300, 2);
+            随机刷按钮.Name = "随机刷按钮";
+            随机刷按钮.Size = new Size(59, 24);
+            随机刷按钮.TabIndex = 7;
+            随机刷按钮.Text = "随机刷";
+            toolTip1.SetToolTip(随机刷按钮, "刷一张各点颜色值随机的位图");
+            随机刷按钮.UseVisualStyleBackColor = true;
+            随机刷按钮.Click += 图像处理按钮们_Click;
             // 
             // 增益参数
             // 
-            this.增益参数.AutoSize = false;
-            this.增益参数.Dock = System.Windows.Forms.DockStyle.None;
-            this.增益参数.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.增益参数.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel4,
-            this.R比例,
-            this.toolStripSeparator3,
-            this.G比例,
-            this.toolStripSeparator4,
-            this.B比例});
-            this.增益参数.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
-            this.增益参数.Location = new System.Drawing.Point(362, 53);
-            this.增益参数.Name = "增益参数";
-            this.增益参数.Size = new System.Drawing.Size(187, 25);
-            this.增益参数.TabIndex = 6;
-            this.增益参数.Text = "toolStrip1";
+            增益参数.AutoSize = false;
+            增益参数.Dock = DockStyle.None;
+            增益参数.Font = new Font("微软雅黑", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            增益参数.Items.AddRange(new ToolStripItem[] { toolStripLabel4, R比例, toolStripSeparator3, G比例, toolStripSeparator4, B比例 });
+            增益参数.LayoutStyle = ToolStripLayoutStyle.Flow;
+            增益参数.Location = new Point(362, 53);
+            增益参数.Name = "增益参数";
+            增益参数.Size = new Size(187, 25);
+            增益参数.TabIndex = 6;
+            增益参数.Text = "toolStrip1";
             // 
             // toolStripLabel4
             // 
-            this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(37, 20);
-            this.toolStripLabel4.Text = "比例";
-            this.toolStripLabel4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolStripLabel4.ToolTipText = "用于转灰度和算RGB增益";
+            toolStripLabel4.Name = "toolStripLabel4";
+            toolStripLabel4.Size = new Size(37, 20);
+            toolStripLabel4.Text = "比例";
+            toolStripLabel4.TextAlign = ContentAlignment.BottomCenter;
+            toolStripLabel4.ToolTipText = "用于转灰度和算RGB增益";
             // 
             // R比例
             // 
-            this.R比例.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.R比例.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.R比例.ForeColor = System.Drawing.Color.Red;
-            this.R比例.MaxLength = 5;
-            this.R比例.Name = "R比例";
-            this.R比例.Size = new System.Drawing.Size(42, 22);
-            this.R比例.Text = "0.299";
-            this.R比例.ToolTipText = "R比例或增益";
+            R比例.BorderStyle = BorderStyle.None;
+            R比例.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            R比例.ForeColor = Color.Red;
+            R比例.MaxLength = 5;
+            R比例.Name = "R比例";
+            R比例.Size = new Size(42, 22);
+            R比例.Text = "0.299";
+            R比例.ToolTipText = "R比例或增益";
             // 
             // toolStripSeparator3
             // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 23);
+            toolStripSeparator3.Name = "toolStripSeparator3";
+            toolStripSeparator3.Size = new Size(6, 23);
             // 
             // G比例
             // 
-            this.G比例.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.G比例.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.G比例.ForeColor = System.Drawing.Color.Green;
-            this.G比例.MaxLength = 5;
-            this.G比例.Name = "G比例";
-            this.G比例.Size = new System.Drawing.Size(42, 22);
-            this.G比例.Text = "0.587";
-            this.G比例.ToolTipText = "G比例或增益";
+            G比例.BorderStyle = BorderStyle.None;
+            G比例.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            G比例.ForeColor = Color.Green;
+            G比例.MaxLength = 5;
+            G比例.Name = "G比例";
+            G比例.Size = new Size(42, 22);
+            G比例.Text = "0.587";
+            G比例.ToolTipText = "G比例或增益";
             // 
             // toolStripSeparator4
             // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 23);
+            toolStripSeparator4.Name = "toolStripSeparator4";
+            toolStripSeparator4.Size = new Size(6, 23);
             // 
             // B比例
             // 
-            this.B比例.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.B比例.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.B比例.ForeColor = System.Drawing.Color.Blue;
-            this.B比例.MaxLength = 5;
-            this.B比例.Name = "B比例";
-            this.B比例.Size = new System.Drawing.Size(42, 22);
-            this.B比例.Text = "0.114";
-            this.B比例.ToolTipText = "B比例或增益";
+            B比例.BorderStyle = BorderStyle.None;
+            B比例.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            B比例.ForeColor = Color.Blue;
+            B比例.MaxLength = 5;
+            B比例.Name = "B比例";
+            B比例.Size = new Size(42, 22);
+            B比例.Text = "0.114";
+            B比例.ToolTipText = "B比例或增益";
             // 
             // RGB参数
             // 
-            this.RGB参数.AutoSize = false;
-            this.RGB参数.Dock = System.Windows.Forms.DockStyle.None;
-            this.RGB参数.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RGB参数.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.RGB标签,
-            this.R值,
-            this.toolStripSeparator1,
-            this.G值,
-            this.toolStripSeparator2,
-            this.B值,
-            this.选色按钮});
-            this.RGB参数.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
-            this.RGB参数.Location = new System.Drawing.Point(362, 27);
-            this.RGB参数.Name = "RGB参数";
-            this.RGB参数.Size = new System.Drawing.Size(187, 25);
-            this.RGB参数.TabIndex = 5;
-            this.RGB参数.Text = "toolStrip1";
+            RGB参数.AutoSize = false;
+            RGB参数.Dock = DockStyle.None;
+            RGB参数.Font = new Font("微软雅黑", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            RGB参数.Items.AddRange(new ToolStripItem[] { RGB标签, R值, toolStripSeparator1, G值, toolStripSeparator2, B值, 选色按钮 });
+            RGB参数.LayoutStyle = ToolStripLayoutStyle.Flow;
+            RGB参数.Location = new Point(362, 27);
+            RGB参数.Name = "RGB参数";
+            RGB参数.Size = new Size(187, 25);
+            RGB参数.TabIndex = 5;
+            RGB参数.Text = "toolStrip1";
             // 
             // RGB标签
             // 
-            this.RGB标签.Name = "RGB标签";
-            this.RGB标签.Size = new System.Drawing.Size(37, 20);
-            this.RGB标签.Text = "RGB";
-            this.RGB标签.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            RGB标签.Name = "RGB标签";
+            RGB标签.Size = new Size(37, 20);
+            RGB标签.Text = "RGB";
+            RGB标签.TextAlign = ContentAlignment.BottomCenter;
             // 
             // R值
             // 
-            this.R值.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.R值.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.R值.ForeColor = System.Drawing.Color.Red;
-            this.R值.MaxLength = 3;
-            this.R值.Name = "R值";
-            this.R值.Size = new System.Drawing.Size(30, 22);
-            this.R值.Text = "0";
-            this.R值.ToolTipText = "刷空图或变透明的R值";
-            this.R值.TextChanged += new System.EventHandler(this.RGB_TextChanged);
+            R值.BorderStyle = BorderStyle.None;
+            R值.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            R值.ForeColor = Color.Red;
+            R值.MaxLength = 3;
+            R值.Name = "R值";
+            R值.Size = new Size(30, 22);
+            R值.Text = "0";
+            R值.ToolTipText = "刷空图或变透明的R值";
+            R值.TextChanged += RGB_TextChanged;
             // 
             // toolStripSeparator1
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 23);
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(6, 23);
             // 
             // G值
             // 
-            this.G值.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.G值.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.G值.ForeColor = System.Drawing.Color.Green;
-            this.G值.MaxLength = 3;
-            this.G值.Name = "G值";
-            this.G值.Size = new System.Drawing.Size(30, 22);
-            this.G值.Text = "0";
-            this.G值.ToolTipText = "G值";
-            this.G值.TextChanged += new System.EventHandler(this.RGB_TextChanged);
+            G值.BorderStyle = BorderStyle.None;
+            G值.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            G值.ForeColor = Color.Green;
+            G值.MaxLength = 3;
+            G值.Name = "G值";
+            G值.Size = new Size(30, 22);
+            G值.Text = "0";
+            G值.ToolTipText = "G值";
+            G值.TextChanged += RGB_TextChanged;
             // 
             // toolStripSeparator2
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 23);
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new Size(6, 23);
             // 
             // B值
             // 
-            this.B值.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.B值.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.B值.ForeColor = System.Drawing.Color.Blue;
-            this.B值.MaxLength = 3;
-            this.B值.Name = "B值";
-            this.B值.Size = new System.Drawing.Size(30, 22);
-            this.B值.Text = "0";
-            this.B值.ToolTipText = "B值";
-            this.B值.TextChanged += new System.EventHandler(this.RGB_TextChanged);
+            B值.BorderStyle = BorderStyle.None;
+            B值.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            B值.ForeColor = Color.Blue;
+            B值.MaxLength = 3;
+            B值.Name = "B值";
+            B值.Size = new Size(30, 22);
+            B值.Text = "0";
+            B值.ToolTipText = "B值";
+            B值.TextChanged += RGB_TextChanged;
             // 
             // 选色按钮
             // 
-            this.选色按钮.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.选色按钮.Font = new System.Drawing.Font("新宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.选色按钮.ForeColor = System.Drawing.Color.Purple;
-            this.选色按钮.Image = ((System.Drawing.Image)(resources.GetObject("选色按钮.Image")));
-            this.选色按钮.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.选色按钮.Name = "选色按钮";
-            this.选色按钮.Size = new System.Drawing.Size(39, 18);
-            this.选色按钮.Text = "选色";
-            this.选色按钮.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.选色按钮.ToolTipText = "打开调色板选一种颜色, 双击图像上某点也可取色";
-            this.选色按钮.Click += new System.EventHandler(this.选色按钮_Click);
+            选色按钮.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            选色按钮.Font = new Font("新宋体", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            选色按钮.ForeColor = Color.Purple;
+            选色按钮.Image = (Image)resources.GetObject("选色按钮.Image");
+            选色按钮.ImageTransparentColor = Color.Magenta;
+            选色按钮.Name = "选色按钮";
+            选色按钮.Size = new Size(39, 18);
+            选色按钮.Text = "选色";
+            选色按钮.TextAlign = ContentAlignment.TopCenter;
+            选色按钮.ToolTipText = "打开调色板选一种颜色, 双击图像上某点也可取色";
+            选色按钮.Click += 选色按钮_Click;
             // 
             // 宽高参数
             // 
-            this.宽高参数.AutoSize = false;
-            this.宽高参数.Dock = System.Windows.Forms.DockStyle.None;
-            this.宽高参数.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.宽高参数.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1,
-            this.图宽,
-            this.toolStripLabel2,
-            this.图高,
-            this.位宽选择});
-            this.宽高参数.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
-            this.宽高参数.Location = new System.Drawing.Point(362, 2);
-            this.宽高参数.Name = "宽高参数";
-            this.宽高参数.Size = new System.Drawing.Size(187, 25);
-            this.宽高参数.TabIndex = 4;
-            this.宽高参数.Text = "toolStrip1";
+            宽高参数.AutoSize = false;
+            宽高参数.Dock = DockStyle.None;
+            宽高参数.Font = new Font("微软雅黑", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            宽高参数.Items.AddRange(new ToolStripItem[] { toolStripLabel1, 图宽, toolStripLabel2, 图高, 位宽选择 });
+            宽高参数.LayoutStyle = ToolStripLayoutStyle.Flow;
+            宽高参数.Location = new Point(362, 2);
+            宽高参数.Name = "宽高参数";
+            宽高参数.Size = new Size(187, 25);
+            宽高参数.TabIndex = 4;
+            宽高参数.Text = "toolStrip1";
             // 
             // toolStripLabel1
             // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(23, 20);
-            this.toolStripLabel1.Text = "宽";
-            this.toolStripLabel1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            toolStripLabel1.Name = "toolStripLabel1";
+            toolStripLabel1.Size = new Size(23, 20);
+            toolStripLabel1.Text = "宽";
+            toolStripLabel1.TextAlign = ContentAlignment.BottomCenter;
             // 
             // 图宽
             // 
-            this.图宽.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.图宽.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.图宽.MaxLength = 4;
-            this.图宽.Name = "图宽";
-            this.图宽.Size = new System.Drawing.Size(40, 22);
-            this.图宽.Text = "1920";
-            this.图宽.ToolTipText = "刷空图的图宽";
+            图宽.BorderStyle = BorderStyle.None;
+            图宽.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            图宽.MaxLength = 4;
+            图宽.Name = "图宽";
+            图宽.Size = new Size(40, 22);
+            图宽.Text = "1920";
+            图宽.ToolTipText = "刷空图的图宽";
             // 
             // toolStripLabel2
             // 
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(23, 20);
-            this.toolStripLabel2.Text = "高";
-            this.toolStripLabel2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            toolStripLabel2.Name = "toolStripLabel2";
+            toolStripLabel2.Size = new Size(23, 20);
+            toolStripLabel2.Text = "高";
+            toolStripLabel2.TextAlign = ContentAlignment.BottomCenter;
             // 
             // 图高
             // 
-            this.图高.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.图高.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.图高.MaxLength = 4;
-            this.图高.Name = "图高";
-            this.图高.Size = new System.Drawing.Size(40, 22);
-            this.图高.Text = "1080";
-            this.图高.ToolTipText = "刷空图的图高";
+            图高.BorderStyle = BorderStyle.None;
+            图高.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            图高.MaxLength = 4;
+            图高.Name = "图高";
+            图高.Size = new Size(40, 22);
+            图高.Text = "1080";
+            图高.ToolTipText = "刷空图的图高";
             // 
             // 位宽选择
             // 
-            this.位宽选择.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.位宽选择.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem2,
-            this.toolStripMenuItem3});
-            this.位宽选择.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.位宽选择.Image = ((System.Drawing.Image)(resources.GetObject("位宽选择.Image")));
-            this.位宽选择.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.位宽选择.Name = "位宽选择";
-            this.位宽选择.Size = new System.Drawing.Size(50, 21);
-            this.位宽选择.Text = "24位";
-            this.位宽选择.ToolTipText = "选择位图是24还是32位";
+            位宽选择.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            位宽选择.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItem2, toolStripMenuItem3 });
+            位宽选择.Font = new Font("微软雅黑", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            位宽选择.Image = (Image)resources.GetObject("位宽选择.Image");
+            位宽选择.ImageTransparentColor = Color.Magenta;
+            位宽选择.Name = "位宽选择";
+            位宽选择.Size = new Size(50, 21);
+            位宽选择.Text = "24位";
+            位宽选择.ToolTipText = "选择位图是24还是32位";
             // 
             // toolStripMenuItem2
             // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(102, 22);
-            this.toolStripMenuItem2.Text = "24位";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.位宽选择_Click);
+            toolStripMenuItem2.Name = "toolStripMenuItem2";
+            toolStripMenuItem2.Size = new Size(102, 22);
+            toolStripMenuItem2.Text = "24位";
+            toolStripMenuItem2.Click += 位宽选择_Click;
             // 
             // toolStripMenuItem3
             // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(102, 22);
-            this.toolStripMenuItem3.Text = "32位";
-            this.toolStripMenuItem3.Click += new System.EventHandler(this.位宽选择_Click);
+            toolStripMenuItem3.Name = "toolStripMenuItem3";
+            toolStripMenuItem3.Size = new Size(102, 22);
+            toolStripMenuItem3.Text = "32位";
+            toolStripMenuItem3.Click += 位宽选择_Click;
             // 
             // 刷空图按钮
             // 
-            this.刷空图按钮.AutoSize = true;
-            this.刷空图按钮.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.刷空图按钮.Location = new System.Drawing.Point(300, 27);
-            this.刷空图按钮.Name = "刷空图按钮";
-            this.刷空图按钮.Size = new System.Drawing.Size(59, 24);
-            this.刷空图按钮.TabIndex = 3;
-            this.刷空图按钮.Text = "刷空图";
-            this.toolTip1.SetToolTip(this.刷空图按钮, "新建一张由左边宽高和颜色参数设定的位图");
-            this.刷空图按钮.UseVisualStyleBackColor = true;
-            this.刷空图按钮.Click += new System.EventHandler(this.图像处理按钮们_Click);
+            刷空图按钮.AutoSize = true;
+            刷空图按钮.Font = new Font("宋体", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            刷空图按钮.Location = new Point(300, 27);
+            刷空图按钮.Name = "刷空图按钮";
+            刷空图按钮.Size = new Size(59, 24);
+            刷空图按钮.TabIndex = 3;
+            刷空图按钮.Text = "刷空图";
+            toolTip1.SetToolTip(刷空图按钮, "新建一张由左边宽高和颜色参数设定的位图");
+            刷空图按钮.UseVisualStyleBackColor = true;
+            刷空图按钮.Click += 图像处理按钮们_Click;
             // 
             // 神经网络panel
             // 
-            this.神经网络panel.Controls.Add(this.Mnist查看按钮);
-            this.神经网络panel.Controls.Add(this.读Yolo标签按钮);
-            this.神经网络panel.Location = new System.Drawing.Point(0, 131);
-            this.神经网络panel.Margin = new System.Windows.Forms.Padding(0);
-            this.神经网络panel.Name = "神经网络panel";
-            this.神经网络panel.Size = new System.Drawing.Size(1131, 128);
-            this.神经网络panel.TabIndex = 2;
+            神经网络panel.Controls.Add(Mnist查看按钮);
+            神经网络panel.Controls.Add(读Yolo标签按钮);
+            神经网络panel.Location = new Point(0, 131);
+            神经网络panel.Margin = new Padding(0);
+            神经网络panel.Name = "神经网络panel";
+            神经网络panel.Size = new Size(1131, 128);
+            神经网络panel.TabIndex = 2;
             // 
             // Mnist查看按钮
             // 
-            this.Mnist查看按钮.Location = new System.Drawing.Point(88, 3);
-            this.Mnist查看按钮.Name = "Mnist查看按钮";
-            this.Mnist查看按钮.Size = new System.Drawing.Size(72, 23);
-            this.Mnist查看按钮.TabIndex = 1;
-            this.Mnist查看按钮.Text = "Mnist查看";
-            this.toolTip1.SetToolTip(this.Mnist查看按钮, "新建一个Mnist数字查看页,点\'读之\'按钮");
-            this.Mnist查看按钮.UseVisualStyleBackColor = true;
-            this.Mnist查看按钮.Click += new System.EventHandler(this.神经网络按钮们_Click);
+            Mnist查看按钮.Location = new Point(88, 3);
+            Mnist查看按钮.Name = "Mnist查看按钮";
+            Mnist查看按钮.Size = new Size(72, 23);
+            Mnist查看按钮.TabIndex = 1;
+            Mnist查看按钮.Text = "Mnist查看";
+            toolTip1.SetToolTip(Mnist查看按钮, "新建一个Mnist数字查看页,点'读之'按钮");
+            Mnist查看按钮.UseVisualStyleBackColor = true;
+            Mnist查看按钮.Click += 神经网络按钮们_Click;
             // 
             // 读Yolo标签按钮
             // 
-            this.读Yolo标签按钮.Location = new System.Drawing.Point(3, 3);
-            this.读Yolo标签按钮.Name = "读Yolo标签按钮";
-            this.读Yolo标签按钮.Size = new System.Drawing.Size(79, 23);
-            this.读Yolo标签按钮.TabIndex = 0;
-            this.读Yolo标签按钮.Text = "读Yolo标签";
-            this.toolTip1.SetToolTip(this.读Yolo标签按钮, "把Yolo标签里的框和类别显示到相应的图片上");
-            this.读Yolo标签按钮.UseVisualStyleBackColor = true;
-            this.读Yolo标签按钮.Click += new System.EventHandler(this.神经网络按钮们_Click);
+            读Yolo标签按钮.Location = new Point(3, 3);
+            读Yolo标签按钮.Name = "读Yolo标签按钮";
+            读Yolo标签按钮.Size = new Size(79, 23);
+            读Yolo标签按钮.TabIndex = 0;
+            读Yolo标签按钮.Text = "读Yolo标签";
+            toolTip1.SetToolTip(读Yolo标签按钮, "把Yolo标签里的框和类别显示到相应的图片上");
+            读Yolo标签按钮.UseVisualStyleBackColor = true;
+            读Yolo标签按钮.Click += 神经网络按钮们_Click;
             // 
             // 点运算按钮
             // 
-            this.点运算按钮.AutoSize = true;
-            this.点运算按钮.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.点运算按钮.Location = new System.Drawing.Point(300, 77);
-            this.点运算按钮.Name = "点运算按钮";
-            this.点运算按钮.Size = new System.Drawing.Size(59, 24);
-            this.点运算按钮.TabIndex = 10;
-            this.点运算按钮.Text = "点运算";
-            this.toolTip1.SetToolTip(this.点运算按钮, "每个点的RGB值乘以W加b");
-            this.点运算按钮.UseVisualStyleBackColor = true;
-            this.点运算按钮.Click += new System.EventHandler(this.图像处理按钮们_Click);
+            点运算按钮.AutoSize = true;
+            点运算按钮.Font = new Font("宋体", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            点运算按钮.Location = new Point(300, 77);
+            点运算按钮.Name = "点运算按钮";
+            点运算按钮.Size = new Size(59, 24);
+            点运算按钮.TabIndex = 10;
+            点运算按钮.Text = "点运算";
+            toolTip1.SetToolTip(点运算按钮, "每个点的RGB值乘以W加b");
+            点运算按钮.UseVisualStyleBackColor = true;
+            点运算按钮.Click += 图像处理按钮们_Click;
             // 
             // 转灰度按钮
             // 
-            this.转灰度按钮.AutoSize = true;
-            this.转灰度按钮.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.转灰度按钮.Location = new System.Drawing.Point(300, 52);
-            this.转灰度按钮.Name = "转灰度按钮";
-            this.转灰度按钮.Size = new System.Drawing.Size(59, 24);
-            this.转灰度按钮.TabIndex = 11;
-            this.转灰度按钮.Text = "转灰度";
-            this.toolTip1.SetToolTip(this.转灰度按钮, "RGB按照右边比值转为灰度");
-            this.转灰度按钮.UseVisualStyleBackColor = true;
-            this.转灰度按钮.Click += new System.EventHandler(this.图像处理按钮们_Click);
+            转灰度按钮.AutoSize = true;
+            转灰度按钮.Font = new Font("宋体", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            转灰度按钮.Location = new Point(300, 52);
+            转灰度按钮.Name = "转灰度按钮";
+            转灰度按钮.Size = new Size(59, 24);
+            转灰度按钮.TabIndex = 11;
+            转灰度按钮.Text = "转灰度";
+            toolTip1.SetToolTip(转灰度按钮, "RGB按照右边比值转为灰度");
+            转灰度按钮.UseVisualStyleBackColor = true;
+            转灰度按钮.Click += 图像处理按钮们_Click;
             // 
             // 变透明按钮
             // 
-            this.变透明按钮.AutoSize = true;
-            this.变透明按钮.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.变透明按钮.Location = new System.Drawing.Point(364, 102);
-            this.变透明按钮.Name = "变透明按钮";
-            this.变透明按钮.Size = new System.Drawing.Size(59, 24);
-            this.变透明按钮.TabIndex = 12;
-            this.变透明按钮.Text = "变透明";
-            this.toolTip1.SetToolTip(this.变透明按钮, "把上面设定的RGB颜色变为透明. 双击图像上的点可取色");
-            this.变透明按钮.UseVisualStyleBackColor = true;
-            this.变透明按钮.Click += new System.EventHandler(this.图像处理按钮们_Click);
+            变透明按钮.AutoSize = true;
+            变透明按钮.Font = new Font("宋体", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            变透明按钮.Location = new Point(364, 102);
+            变透明按钮.Name = "变透明按钮";
+            变透明按钮.Size = new Size(59, 24);
+            变透明按钮.TabIndex = 12;
+            变透明按钮.Text = "变透明";
+            toolTip1.SetToolTip(变透明按钮, "把上面设定的RGB颜色变为透明. 双击图像上的点可取色");
+            变透明按钮.UseVisualStyleBackColor = true;
+            变透明按钮.Click += 图像处理按钮们_Click;
             // 
             // 变RAW按钮
             // 
-            this.变RAW按钮.AutoSize = true;
-            this.变RAW按钮.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.变RAW按钮.Location = new System.Drawing.Point(299, 102);
-            this.变RAW按钮.Name = "变RAW按钮";
-            this.变RAW按钮.Size = new System.Drawing.Size(60, 24);
-            this.变RAW按钮.TabIndex = 13;
-            this.变RAW按钮.Text = "变RAW";
-            this.toolTip1.SetToolTip(this.变RAW按钮, "把RGB图转回没插值前的Raw格式");
-            this.变RAW按钮.UseVisualStyleBackColor = true;
-            this.变RAW按钮.Click += new System.EventHandler(this.图像处理按钮们_Click);
+            变RAW按钮.AutoSize = true;
+            变RAW按钮.Font = new Font("宋体", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            变RAW按钮.Location = new Point(299, 102);
+            变RAW按钮.Name = "变RAW按钮";
+            变RAW按钮.Size = new Size(60, 24);
+            变RAW按钮.TabIndex = 13;
+            变RAW按钮.Text = "变RAW";
+            toolTip1.SetToolTip(变RAW按钮, "把RGB图转回没插值前的Raw格式");
+            变RAW按钮.UseVisualStyleBackColor = true;
+            变RAW按钮.Click += 图像处理按钮们_Click;
             // 
             // RGB增益按钮
             // 
-            this.RGB增益按钮.AutoSize = true;
-            this.RGB增益按钮.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RGB增益按钮.Location = new System.Drawing.Point(427, 102);
-            this.RGB增益按钮.Name = "RGB增益按钮";
-            this.RGB增益按钮.Size = new System.Drawing.Size(45, 24);
-            this.RGB增益按钮.TabIndex = 14;
-            this.RGB增益按钮.Text = "增益";
-            this.toolTip1.SetToolTip(this.RGB增益按钮, "每个点的RGB值分别乘以上面的比例值");
-            this.RGB增益按钮.UseVisualStyleBackColor = true;
-            this.RGB增益按钮.Click += new System.EventHandler(this.图像处理按钮们_Click);
+            RGB增益按钮.AutoSize = true;
+            RGB增益按钮.Font = new Font("宋体", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            RGB增益按钮.Location = new Point(427, 102);
+            RGB增益按钮.Name = "RGB增益按钮";
+            RGB增益按钮.Size = new Size(45, 24);
+            RGB增益按钮.TabIndex = 14;
+            RGB增益按钮.Text = "增益";
+            toolTip1.SetToolTip(RGB增益按钮, "每个点的RGB值分别乘以上面的比例值");
+            RGB增益按钮.UseVisualStyleBackColor = true;
+            RGB增益按钮.Click += 图像处理按钮们_Click;
             // 
             // 二图相减按钮
             // 
-            this.二图相减按钮.AutoSize = true;
-            this.二图相减按钮.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.二图相减按钮.Location = new System.Drawing.Point(477, 102);
-            this.二图相减按钮.Name = "二图相减按钮";
-            this.二图相减按钮.Size = new System.Drawing.Size(73, 24);
-            this.二图相减按钮.TabIndex = 15;
-            this.二图相减按钮.Text = "二图相减";
-            this.toolTip1.SetToolTip(this.二图相减按钮, "把长宽相同的两幅图逐像素相减");
-            this.二图相减按钮.UseVisualStyleBackColor = true;
-            this.二图相减按钮.Click += new System.EventHandler(this.图像处理按钮们_Click);
+            二图相减按钮.AutoSize = true;
+            二图相减按钮.Font = new Font("宋体", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            二图相减按钮.Location = new Point(477, 102);
+            二图相减按钮.Name = "二图相减按钮";
+            二图相减按钮.Size = new Size(73, 24);
+            二图相减按钮.TabIndex = 15;
+            二图相减按钮.Text = "二图相减";
+            toolTip1.SetToolTip(二图相减按钮, "把长宽相同的两幅图逐像素相减");
+            二图相减按钮.UseVisualStyleBackColor = true;
+            二图相减按钮.Click += 图像处理按钮们_Click;
             // 
             // 画直方图按钮
             // 
-            this.画直方图按钮.AutoSize = true;
-            this.画直方图按钮.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.画直方图按钮.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.画直方图按钮.Location = new System.Drawing.Point(226, 2);
-            this.画直方图按钮.Name = "画直方图按钮";
-            this.画直方图按钮.Size = new System.Drawing.Size(59, 24);
-            this.画直方图按钮.TabIndex = 16;
-            this.画直方图按钮.Text = "直方图";
-            this.toolTip1.SetToolTip(this.画直方图按钮, "画一幅图片的RGB, HSL直方图. HS直方图中颜色深代表点数多.");
-            this.画直方图按钮.UseVisualStyleBackColor = true;
-            this.画直方图按钮.Click += new System.EventHandler(this.图像处理按钮们_Click);
+            画直方图按钮.AutoSize = true;
+            画直方图按钮.Font = new Font("宋体", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            画直方图按钮.ForeColor = SystemColors.ControlText;
+            画直方图按钮.Location = new Point(226, 2);
+            画直方图按钮.Name = "画直方图按钮";
+            画直方图按钮.Size = new Size(59, 24);
+            画直方图按钮.TabIndex = 16;
+            画直方图按钮.Text = "直方图";
+            toolTip1.SetToolTip(画直方图按钮, "画一幅图片的RGB, HSL直方图. HS直方图中颜色深代表点数多.");
+            画直方图按钮.UseVisualStyleBackColor = true;
+            画直方图按钮.Click += 图像处理按钮们_Click;
             // 
             // 直方图均衡化按钮
             // 
-            this.直方图均衡化按钮.AutoSize = true;
-            this.直方图均衡化按钮.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.直方图均衡化按钮.Location = new System.Drawing.Point(226, 27);
-            this.直方图均衡化按钮.Name = "直方图均衡化按钮";
-            this.直方图均衡化按钮.Size = new System.Drawing.Size(59, 24);
-            this.直方图均衡化按钮.TabIndex = 17;
-            this.直方图均衡化按钮.Text = "均衡化";
-            this.toolTip1.SetToolTip(this.直方图均衡化按钮, "直方图均衡化处理");
-            this.直方图均衡化按钮.UseVisualStyleBackColor = true;
-            this.直方图均衡化按钮.Click += new System.EventHandler(this.图像处理按钮们_Click);
+            直方图均衡化按钮.AutoSize = true;
+            直方图均衡化按钮.Font = new Font("宋体", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            直方图均衡化按钮.Location = new Point(226, 27);
+            直方图均衡化按钮.Name = "直方图均衡化按钮";
+            直方图均衡化按钮.Size = new Size(59, 24);
+            直方图均衡化按钮.TabIndex = 17;
+            直方图均衡化按钮.Text = "均衡化";
+            toolTip1.SetToolTip(直方图均衡化按钮, "直方图均衡化处理");
+            直方图均衡化按钮.UseVisualStyleBackColor = true;
+            直方图均衡化按钮.Click += 图像处理按钮们_Click;
             // 
             // Canny按钮
             // 
-            this.Canny按钮.AutoSize = true;
-            this.Canny按钮.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Canny按钮.Location = new System.Drawing.Point(226, 77);
-            this.Canny按钮.Name = "Canny按钮";
-            this.Canny按钮.Size = new System.Drawing.Size(59, 24);
-            this.Canny按钮.TabIndex = 23;
-            this.Canny按钮.Text = "Canny";
-            this.toolTip1.SetToolTip(this.Canny按钮, "Canny边缘检测");
-            this.Canny按钮.UseVisualStyleBackColor = true;
-            this.Canny按钮.Click += new System.EventHandler(this.图像处理按钮们_Click);
+            Canny按钮.AutoSize = true;
+            Canny按钮.Font = new Font("宋体", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            Canny按钮.Location = new Point(226, 77);
+            Canny按钮.Name = "Canny按钮";
+            Canny按钮.Size = new Size(59, 24);
+            Canny按钮.TabIndex = 23;
+            Canny按钮.Text = "Canny";
+            toolTip1.SetToolTip(Canny按钮, "Canny边缘检测");
+            Canny按钮.UseVisualStyleBackColor = true;
+            Canny按钮.Click += 图像处理按钮们_Click;
             // 
             // Sobel按钮
             // 
-            this.Sobel按钮.AutoSize = true;
-            this.Sobel按钮.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Sobel按钮.Location = new System.Drawing.Point(226, 52);
-            this.Sobel按钮.Name = "Sobel按钮";
-            this.Sobel按钮.Size = new System.Drawing.Size(59, 24);
-            this.Sobel按钮.TabIndex = 22;
-            this.Sobel按钮.Text = "Sobel";
-            this.toolTip1.SetToolTip(this.Sobel按钮, "Sobel边缘检测算子");
-            this.Sobel按钮.UseVisualStyleBackColor = true;
-            this.Sobel按钮.Click += new System.EventHandler(this.图像处理按钮们_Click);
+            Sobel按钮.AutoSize = true;
+            Sobel按钮.Font = new Font("宋体", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            Sobel按钮.Location = new Point(226, 52);
+            Sobel按钮.Name = "Sobel按钮";
+            Sobel按钮.Size = new Size(59, 24);
+            Sobel按钮.TabIndex = 22;
+            Sobel按钮.Text = "Sobel";
+            toolTip1.SetToolTip(Sobel按钮, "Sobel边缘检测算子");
+            Sobel按钮.UseVisualStyleBackColor = true;
+            Sobel按钮.Click += 图像处理按钮们_Click;
             // 
             // 标背景按钮
             // 
-            this.标背景按钮.AutoSize = true;
-            this.标背景按钮.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.标背景按钮.Location = new System.Drawing.Point(3, 2);
-            this.标背景按钮.Name = "标背景按钮";
-            this.标背景按钮.Size = new System.Drawing.Size(59, 24);
-            this.标背景按钮.TabIndex = 20;
-            this.标背景按钮.Text = "标背景";
-            this.toolTip1.SetToolTip(this.标背景按钮, "把HSL值在右边上下限之内的点颜色改为左边设置的RGB值");
-            this.标背景按钮.UseVisualStyleBackColor = true;
-            this.标背景按钮.Click += new System.EventHandler(this.图像处理按钮们_Click);
+            标背景按钮.AutoSize = true;
+            标背景按钮.Font = new Font("宋体", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            标背景按钮.Location = new Point(3, 2);
+            标背景按钮.Name = "标背景按钮";
+            标背景按钮.Size = new Size(59, 24);
+            标背景按钮.TabIndex = 20;
+            标背景按钮.Text = "标背景";
+            toolTip1.SetToolTip(标背景按钮, "把HSL值在右边上下限之内的点颜色改为左边设置的RGB值");
+            标背景按钮.UseVisualStyleBackColor = true;
+            标背景按钮.Click += 图像处理按钮们_Click;
             // 
             // 二值化按钮
             // 
-            this.二值化按钮.AutoSize = true;
-            this.二值化按钮.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.二值化按钮.Location = new System.Drawing.Point(3, 27);
-            this.二值化按钮.Name = "二值化按钮";
-            this.二值化按钮.Size = new System.Drawing.Size(59, 24);
-            this.二值化按钮.TabIndex = 21;
-            this.二值化按钮.Text = "二值化";
-            this.toolTip1.SetToolTip(this.二值化按钮, "二值化图像, 右边HSL范围内的点变为黑色背景");
-            this.二值化按钮.UseVisualStyleBackColor = true;
-            this.二值化按钮.Click += new System.EventHandler(this.图像处理按钮们_Click);
+            二值化按钮.AutoSize = true;
+            二值化按钮.Font = new Font("宋体", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            二值化按钮.Location = new Point(3, 27);
+            二值化按钮.Name = "二值化按钮";
+            二值化按钮.Size = new Size(59, 24);
+            二值化按钮.TabIndex = 21;
+            二值化按钮.Text = "二值化";
+            toolTip1.SetToolTip(二值化按钮, "二值化图像, 右边HSL范围内的点变为黑色背景");
+            二值化按钮.UseVisualStyleBackColor = true;
+            二值化按钮.Click += 图像处理按钮们_Click;
             // 
             // 递归连通按钮
             // 
-            this.递归连通按钮.AutoSize = true;
-            this.递归连通按钮.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.递归连通按钮.Location = new System.Drawing.Point(3, 102);
-            this.递归连通按钮.Name = "递归连通按钮";
-            this.递归连通按钮.Size = new System.Drawing.Size(73, 24);
-            this.递归连通按钮.TabIndex = 24;
-            this.递归连通按钮.Text = "递归连通";
-            this.toolTip1.SetToolTip(this.递归连通按钮, "二值图像递归法连通域标记, 点多会爆栈!");
-            this.递归连通按钮.UseVisualStyleBackColor = true;
-            this.递归连通按钮.Click += new System.EventHandler(this.图像处理按钮们_Click);
+            递归连通按钮.AutoSize = true;
+            递归连通按钮.Font = new Font("宋体", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            递归连通按钮.Location = new Point(3, 102);
+            递归连通按钮.Name = "递归连通按钮";
+            递归连通按钮.Size = new Size(73, 24);
+            递归连通按钮.TabIndex = 24;
+            递归连通按钮.Text = "递归连通";
+            toolTip1.SetToolTip(递归连通按钮, "二值图像递归法连通域标记, 点多会爆栈!");
+            递归连通按钮.UseVisualStyleBackColor = true;
+            递归连通按钮.Click += 图像处理按钮们_Click;
             // 
             // 是否显示过程
             // 
-            this.是否显示过程.AutoSize = true;
-            this.是否显示过程.Location = new System.Drawing.Point(81, 105);
-            this.是否显示过程.Name = "是否显示过程";
-            this.是否显示过程.Size = new System.Drawing.Size(75, 21);
-            this.是否显示过程.TabIndex = 25;
-            this.是否显示过程.Text = "显示过程";
-            this.toolTip1.SetToolTip(this.是否显示过程, "勾选显示连通域标记相邻点的过程");
-            this.是否显示过程.UseVisualStyleBackColor = true;
+            是否显示过程.AutoSize = true;
+            是否显示过程.Location = new Point(81, 105);
+            是否显示过程.Name = "是否显示过程";
+            是否显示过程.Size = new Size(75, 21);
+            是否显示过程.TabIndex = 25;
+            是否显示过程.Text = "显示过程";
+            toolTip1.SetToolTip(是否显示过程, "勾选显示连通域标记相邻点的过程");
+            是否显示过程.UseVisualStyleBackColor = true;
             // 
             // 阈值胀蚀按钮
             // 
-            this.阈值胀蚀按钮.AutoSize = true;
-            this.阈值胀蚀按钮.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.阈值胀蚀按钮.Location = new System.Drawing.Point(3, 77);
-            this.阈值胀蚀按钮.Name = "阈值胀蚀按钮";
-            this.阈值胀蚀按钮.Size = new System.Drawing.Size(59, 24);
-            this.阈值胀蚀按钮.TabIndex = 27;
-            this.阈值胀蚀按钮.Text = "阈胀蚀";
-            this.toolTip1.SetToolTip(this.阈值胀蚀按钮, "可调阈值的膨胀腐蚀");
-            this.阈值胀蚀按钮.UseVisualStyleBackColor = true;
-            this.阈值胀蚀按钮.Click += new System.EventHandler(this.图像处理按钮们_Click);
+            阈值胀蚀按钮.AutoSize = true;
+            阈值胀蚀按钮.Font = new Font("宋体", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            阈值胀蚀按钮.Location = new Point(3, 77);
+            阈值胀蚀按钮.Name = "阈值胀蚀按钮";
+            阈值胀蚀按钮.Size = new Size(59, 24);
+            阈值胀蚀按钮.TabIndex = 27;
+            阈值胀蚀按钮.Text = "阈胀蚀";
+            toolTip1.SetToolTip(阈值胀蚀按钮, "可调阈值的膨胀腐蚀");
+            阈值胀蚀按钮.UseVisualStyleBackColor = true;
+            阈值胀蚀按钮.Click += 图像处理按钮们_Click;
             // 
             // 取边缘按钮
             // 
-            this.取边缘按钮.AutoSize = true;
-            this.取边缘按钮.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.取边缘按钮.Location = new System.Drawing.Point(3, 52);
-            this.取边缘按钮.Name = "取边缘按钮";
-            this.取边缘按钮.Size = new System.Drawing.Size(59, 24);
-            this.取边缘按钮.TabIndex = 28;
-            this.取边缘按钮.Text = "取边缘";
-            this.toolTip1.SetToolTip(this.取边缘按钮, "仅留下二值图像的边缘部分");
-            this.取边缘按钮.UseVisualStyleBackColor = true;
-            this.取边缘按钮.Click += new System.EventHandler(this.图像处理按钮们_Click);
+            取边缘按钮.AutoSize = true;
+            取边缘按钮.Font = new Font("宋体", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            取边缘按钮.Location = new Point(3, 52);
+            取边缘按钮.Name = "取边缘按钮";
+            取边缘按钮.Size = new Size(59, 24);
+            取边缘按钮.TabIndex = 28;
+            取边缘按钮.Text = "取边缘";
+            toolTip1.SetToolTip(取边缘按钮, "仅留下二值图像的边缘部分");
+            取边缘按钮.UseVisualStyleBackColor = true;
+            取边缘按钮.Click += 图像处理按钮们_Click;
             // 
             // H使能
             // 
-            this.H使能.AutoSize = true;
-            this.H使能.Checked = true;
-            this.H使能.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.H使能.Location = new System.Drawing.Point(104, 53);
-            this.H使能.Name = "H使能";
-            this.H使能.Size = new System.Drawing.Size(36, 21);
-            this.H使能.TabIndex = 29;
-            this.H使能.Text = "H";
-            this.toolTip1.SetToolTip(this.H使能, "选中代表这组阈值起作用");
-            this.H使能.UseVisualStyleBackColor = true;
-            this.H使能.CheckedChanged += new System.EventHandler(this.H使能_CheckedChanged);
+            H使能.AutoSize = true;
+            H使能.Checked = true;
+            H使能.CheckState = CheckState.Checked;
+            H使能.Location = new Point(104, 53);
+            H使能.Name = "H使能";
+            H使能.Size = new Size(36, 21);
+            H使能.TabIndex = 29;
+            H使能.Text = "H";
+            toolTip1.SetToolTip(H使能, "选中代表这组阈值起作用");
+            H使能.UseVisualStyleBackColor = true;
+            H使能.CheckedChanged += H使能_CheckedChanged;
             // 
             // S使能
             // 
-            this.S使能.AutoSize = true;
-            this.S使能.Location = new System.Drawing.Point(142, 53);
-            this.S使能.Name = "S使能";
-            this.S使能.Size = new System.Drawing.Size(34, 21);
-            this.S使能.TabIndex = 30;
-            this.S使能.Text = "S";
-            this.toolTip1.SetToolTip(this.S使能, "选中代表这组阈值起作用");
-            this.S使能.UseVisualStyleBackColor = true;
-            this.S使能.CheckedChanged += new System.EventHandler(this.H使能_CheckedChanged);
+            S使能.AutoSize = true;
+            S使能.Location = new Point(142, 53);
+            S使能.Name = "S使能";
+            S使能.Size = new Size(34, 21);
+            S使能.TabIndex = 30;
+            S使能.Text = "S";
+            toolTip1.SetToolTip(S使能, "选中代表这组阈值起作用");
+            S使能.UseVisualStyleBackColor = true;
+            S使能.CheckedChanged += H使能_CheckedChanged;
             // 
             // L使能
             // 
-            this.L使能.AutoSize = true;
-            this.L使能.Location = new System.Drawing.Point(180, 53);
-            this.L使能.Name = "L使能";
-            this.L使能.Size = new System.Drawing.Size(33, 21);
-            this.L使能.TabIndex = 31;
-            this.L使能.Text = "L";
-            this.toolTip1.SetToolTip(this.L使能, "选中代表这组阈值起作用");
-            this.L使能.UseVisualStyleBackColor = true;
-            this.L使能.CheckedChanged += new System.EventHandler(this.H使能_CheckedChanged);
+            L使能.AutoSize = true;
+            L使能.Location = new Point(180, 53);
+            L使能.Name = "L使能";
+            L使能.Size = new Size(33, 21);
+            L使能.TabIndex = 31;
+            L使能.Text = "L";
+            toolTip1.SetToolTip(L使能, "选中代表这组阈值起作用");
+            L使能.UseVisualStyleBackColor = true;
+            L使能.CheckedChanged += H使能_CheckedChanged;
             // 
             // R转H按钮
             // 
-            this.R转H按钮.AutoSize = true;
-            this.R转H按钮.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.R转H按钮.Location = new System.Drawing.Point(562, 3);
-            this.R转H按钮.Name = "R转H按钮";
-            this.R转H按钮.Size = new System.Drawing.Size(45, 24);
-            this.R转H按钮.TabIndex = 46;
-            this.R转H按钮.Text = "R转H";
-            this.toolTip1.SetToolTip(this.R转H按钮, "把RGB值转为HSL值");
-            this.R转H按钮.UseVisualStyleBackColor = true;
-            this.R转H按钮.Click += new System.EventHandler(this.图像处理按钮们_Click);
+            R转H按钮.AutoSize = true;
+            R转H按钮.Font = new Font("宋体", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            R转H按钮.Location = new Point(562, 3);
+            R转H按钮.Name = "R转H按钮";
+            R转H按钮.Size = new Size(45, 24);
+            R转H按钮.TabIndex = 46;
+            R转H按钮.Text = "R转H";
+            toolTip1.SetToolTip(R转H按钮, "把RGB值转为HSL值");
+            R转H按钮.UseVisualStyleBackColor = true;
+            R转H按钮.Click += 图像处理按钮们_Click;
             // 
             // H转R按钮
             // 
-            this.H转R按钮.AutoSize = true;
-            this.H转R按钮.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.H转R按钮.Location = new System.Drawing.Point(613, 3);
-            this.H转R按钮.Name = "H转R按钮";
-            this.H转R按钮.Size = new System.Drawing.Size(45, 24);
-            this.H转R按钮.TabIndex = 47;
-            this.H转R按钮.Text = "H转R";
-            this.toolTip1.SetToolTip(this.H转R按钮, "把HSL值转为RGB值");
-            this.H转R按钮.UseVisualStyleBackColor = true;
-            this.H转R按钮.Click += new System.EventHandler(this.图像处理按钮们_Click);
+            H转R按钮.AutoSize = true;
+            H转R按钮.Font = new Font("宋体", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            H转R按钮.Location = new Point(613, 3);
+            H转R按钮.Name = "H转R按钮";
+            H转R按钮.Size = new Size(45, 24);
+            H转R按钮.TabIndex = 47;
+            H转R按钮.Text = "H转R";
+            toolTip1.SetToolTip(H转R按钮, "把HSL值转为RGB值");
+            H转R按钮.UseVisualStyleBackColor = true;
+            H转R按钮.Click += 图像处理按钮们_Click;
             // 
-            // 显示细线
+            // 显示边线
             // 
-            this.显示细线.AutoSize = true;
-            this.显示细线.Location = new System.Drawing.Point(796, 77);
-            this.显示细线.Name = "显示细线";
-            this.显示细线.Size = new System.Drawing.Size(39, 21);
-            this.显示细线.TabIndex = 52;
-            this.显示细线.Text = "线";
-            this.toolTip1.SetToolTip(this.显示细线, "在放大图上显示细线");
-            this.显示细线.UseVisualStyleBackColor = true;
-            this.显示细线.Visible = false;
-            this.显示细线.CheckedChanged += new System.EventHandler(this.显示RGB_CheckedChanged);
+            显示边线.AutoSize = true;
+            显示边线.Location = new Point(796, 77);
+            显示边线.Name = "显示边线";
+            显示边线.Size = new Size(99, 21);
+            显示边线.TabIndex = 52;
+            显示边线.Text = "显示边缘线段";
+            toolTip1.SetToolTip(显示边线, "在放大图上显示边缘线段识别结果");
+            显示边线.UseVisualStyleBackColor = true;
+            显示边线.CheckedChanged += 显示RGB_CheckedChanged;
             // 
             // 数点按钮
             // 
-            this.数点按钮.AutoSize = true;
-            this.数点按钮.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.数点按钮.Location = new System.Drawing.Point(670, 3);
-            this.数点按钮.Name = "数点按钮";
-            this.数点按钮.Size = new System.Drawing.Size(45, 24);
-            this.数点按钮.TabIndex = 54;
-            this.数点按钮.Text = "数点";
-            this.toolTip1.SetToolTip(this.数点按钮, "数灰度图片里有多少个大于某个阈值的点");
-            this.数点按钮.UseVisualStyleBackColor = true;
-            this.数点按钮.Click += new System.EventHandler(this.图像处理按钮们_Click);
+            数点按钮.AutoSize = true;
+            数点按钮.Font = new Font("宋体", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            数点按钮.Location = new Point(670, 3);
+            数点按钮.Name = "数点按钮";
+            数点按钮.Size = new Size(45, 24);
+            数点按钮.TabIndex = 54;
+            数点按钮.Text = "数点";
+            toolTip1.SetToolTip(数点按钮, "数灰度图片里有多少个大于某个阈值的点");
+            数点按钮.UseVisualStyleBackColor = true;
+            数点按钮.Click += 图像处理按钮们_Click;
             // 
             // 黑掉背景
             // 
-            this.黑掉背景.AutoSize = true;
-            this.黑掉背景.Location = new System.Drawing.Point(796, 50);
-            this.黑掉背景.Name = "黑掉背景";
-            this.黑掉背景.Size = new System.Drawing.Size(39, 21);
-            this.黑掉背景.TabIndex = 55;
-            this.黑掉背景.Text = "黑";
-            this.toolTip1.SetToolTip(this.黑掉背景, "把放大图的原图黑掉");
-            this.黑掉背景.UseVisualStyleBackColor = true;
-            this.黑掉背景.Visible = false;
-            this.黑掉背景.CheckedChanged += new System.EventHandler(this.显示RGB_CheckedChanged);
+            黑掉背景.AutoSize = true;
+            黑掉背景.Location = new Point(796, 50);
+            黑掉背景.Name = "黑掉背景";
+            黑掉背景.Size = new Size(87, 21);
+            黑掉背景.TabIndex = 55;
+            黑掉背景.Text = "把原图黑掉";
+            toolTip1.SetToolTip(黑掉背景, "把放大图的原图黑掉");
+            黑掉背景.UseVisualStyleBackColor = true;
+            黑掉背景.CheckedChanged += 显示RGB_CheckedChanged;
+            // 
+            // 笔粗细
+            // 
+            笔粗细.Location = new Point(184, 45);
+            笔粗细.MaxLength = 2;
+            笔粗细.Name = "笔粗细";
+            笔粗细.Size = new Size(27, 25);
+            笔粗细.TabIndex = 7;
+            笔粗细.Text = "1";
+            toolTip1.SetToolTip(笔粗细, "画笔粗细");
+            笔粗细.TextChanged += 笔粗细_TextChanged;
             // 
             // panel1
             // 
-            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel1.Controls.Add(this.黑掉背景);
-            this.panel1.Controls.Add(this.数点按钮);
-            this.panel1.Controls.Add(this.显示细线);
-            this.panel1.Controls.Add(this.测试按钮);
-            this.panel1.Controls.Add(this.H转R按钮);
-            this.panel1.Controls.Add(this.R转H按钮);
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.L使能);
-            this.panel1.Controls.Add(this.S使能);
-            this.panel1.Controls.Add(this.H使能);
-            this.panel1.Controls.Add(this.取边缘按钮);
-            this.panel1.Controls.Add(this.阈值胀蚀按钮);
-            this.panel1.Controls.Add(this.toolStrip3);
-            this.panel1.Controls.Add(this.是否显示过程);
-            this.panel1.Controls.Add(this.递归连通按钮);
-            this.panel1.Controls.Add(this.Canny按钮);
-            this.panel1.Controls.Add(this.Sobel按钮);
-            this.panel1.Controls.Add(this.二值化按钮);
-            this.panel1.Controls.Add(this.标背景按钮);
-            this.panel1.Controls.Add(this.toolStrip2);
-            this.panel1.Controls.Add(this.toolStrip1);
-            this.panel1.Controls.Add(this.直方图均衡化按钮);
-            this.panel1.Controls.Add(this.画直方图按钮);
-            this.panel1.Controls.Add(this.二图相减按钮);
-            this.panel1.Controls.Add(this.RGB增益按钮);
-            this.panel1.Controls.Add(this.变RAW按钮);
-            this.panel1.Controls.Add(this.变透明按钮);
-            this.panel1.Controls.Add(this.转灰度按钮);
-            this.panel1.Controls.Add(this.点运算按钮);
-            this.panel1.Controls.Add(this.刷空图按钮);
-            this.panel1.Controls.Add(this.Wb选值);
-            this.panel1.Controls.Add(this.宽高参数);
-            this.panel1.Controls.Add(this.RGB参数);
-            this.panel1.Controls.Add(this.点运算参数);
-            this.panel1.Controls.Add(this.增益参数);
-            this.panel1.Controls.Add(this.随机刷按钮);
-            this.panel1.Location = new System.Drawing.Point(70, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1219, 128);
-            this.panel1.TabIndex = 10;
+            panel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            panel1.Controls.Add(黑掉背景);
+            panel1.Controls.Add(数点按钮);
+            panel1.Controls.Add(显示边线);
+            panel1.Controls.Add(测试按钮);
+            panel1.Controls.Add(H转R按钮);
+            panel1.Controls.Add(R转H按钮);
+            panel1.Controls.Add(groupBox1);
+            panel1.Controls.Add(L使能);
+            panel1.Controls.Add(S使能);
+            panel1.Controls.Add(H使能);
+            panel1.Controls.Add(取边缘按钮);
+            panel1.Controls.Add(阈值胀蚀按钮);
+            panel1.Controls.Add(toolStrip3);
+            panel1.Controls.Add(是否显示过程);
+            panel1.Controls.Add(递归连通按钮);
+            panel1.Controls.Add(Canny按钮);
+            panel1.Controls.Add(Sobel按钮);
+            panel1.Controls.Add(二值化按钮);
+            panel1.Controls.Add(标背景按钮);
+            panel1.Controls.Add(toolStrip2);
+            panel1.Controls.Add(toolStrip1);
+            panel1.Controls.Add(直方图均衡化按钮);
+            panel1.Controls.Add(画直方图按钮);
+            panel1.Controls.Add(二图相减按钮);
+            panel1.Controls.Add(RGB增益按钮);
+            panel1.Controls.Add(变RAW按钮);
+            panel1.Controls.Add(变透明按钮);
+            panel1.Controls.Add(转灰度按钮);
+            panel1.Controls.Add(点运算按钮);
+            panel1.Controls.Add(刷空图按钮);
+            panel1.Controls.Add(Wb选值);
+            panel1.Controls.Add(宽高参数);
+            panel1.Controls.Add(RGB参数);
+            panel1.Controls.Add(点运算参数);
+            panel1.Controls.Add(增益参数);
+            panel1.Controls.Add(随机刷按钮);
+            panel1.Location = new Point(70, 0);
+            panel1.Margin = new Padding(0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1219, 128);
+            panel1.TabIndex = 10;
             // 
             // 测试按钮
             // 
-            this.测试按钮.AutoSize = true;
-            this.测试按钮.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.测试按钮.Location = new System.Drawing.Point(240, 102);
-            this.测试按钮.Name = "测试按钮";
-            this.测试按钮.Size = new System.Drawing.Size(45, 24);
-            this.测试按钮.TabIndex = 51;
-            this.测试按钮.Text = "测试";
-            this.测试按钮.UseVisualStyleBackColor = true;
-            this.测试按钮.Click += new System.EventHandler(this.图像处理按钮们_Click);
+            测试按钮.AutoSize = true;
+            测试按钮.Font = new Font("宋体", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            测试按钮.Location = new Point(240, 102);
+            测试按钮.Name = "测试按钮";
+            测试按钮.Size = new Size(45, 24);
+            测试按钮.TabIndex = 51;
+            测试按钮.Text = "测试";
+            测试按钮.UseVisualStyleBackColor = true;
+            测试按钮.Click += 图像处理按钮们_Click;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton画框擦);
-            this.groupBox1.Controls.Add(this.radioButton擦);
-            this.groupBox1.Controls.Add(this.radioButton圆);
-            this.groupBox1.Controls.Add(this.radioButton矩形);
-            this.groupBox1.Controls.Add(this.radioButton线);
-            this.groupBox1.Controls.Add(this.radioButton点);
-            this.groupBox1.Controls.Add(this.radioButton不画);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(563, 32);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(227, 80);
-            this.groupBox1.TabIndex = 37;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "画二值图像";
+            groupBox1.Controls.Add(笔粗细);
+            groupBox1.Controls.Add(radioButton画框擦);
+            groupBox1.Controls.Add(radioButton擦);
+            groupBox1.Controls.Add(radioButton圆);
+            groupBox1.Controls.Add(radioButton矩形);
+            groupBox1.Controls.Add(radioButton线);
+            groupBox1.Controls.Add(radioButton点);
+            groupBox1.Controls.Add(radioButton不画);
+            groupBox1.Font = new Font("Microsoft YaHei UI", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            groupBox1.Location = new Point(563, 32);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(227, 80);
+            groupBox1.TabIndex = 37;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "画二值图像";
             // 
             // radioButton画框擦
             // 
-            this.radioButton画框擦.AutoSize = true;
-            this.radioButton画框擦.Location = new System.Drawing.Point(116, 48);
-            this.radioButton画框擦.Name = "radioButton画框擦";
-            this.radioButton画框擦.Size = new System.Drawing.Size(69, 24);
-            this.radioButton画框擦.TabIndex = 6;
-            this.radioButton画框擦.Text = "画框擦";
-            this.radioButton画框擦.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radioButton画框擦.UseVisualStyleBackColor = true;
-            this.radioButton画框擦.CheckedChanged += new System.EventHandler(this.radioButton_Click);
+            radioButton画框擦.AutoSize = true;
+            radioButton画框擦.Location = new Point(116, 45);
+            radioButton画框擦.Name = "radioButton画框擦";
+            radioButton画框擦.Size = new Size(69, 24);
+            radioButton画框擦.TabIndex = 6;
+            radioButton画框擦.Text = "画框擦";
+            radioButton画框擦.TextAlign = ContentAlignment.MiddleCenter;
+            radioButton画框擦.UseVisualStyleBackColor = true;
+            radioButton画框擦.CheckedChanged += radioButton_Click;
             // 
             // radioButton擦
             // 
-            this.radioButton擦.AutoSize = true;
-            this.radioButton擦.Location = new System.Drawing.Point(69, 48);
-            this.radioButton擦.Name = "radioButton擦";
-            this.radioButton擦.Size = new System.Drawing.Size(41, 24);
-            this.radioButton擦.TabIndex = 5;
-            this.radioButton擦.Text = "擦";
-            this.radioButton擦.UseVisualStyleBackColor = true;
-            this.radioButton擦.CheckedChanged += new System.EventHandler(this.radioButton_Click);
+            radioButton擦.AutoSize = true;
+            radioButton擦.Location = new Point(69, 45);
+            radioButton擦.Name = "radioButton擦";
+            radioButton擦.Size = new Size(41, 24);
+            radioButton擦.TabIndex = 5;
+            radioButton擦.Text = "擦";
+            radioButton擦.UseVisualStyleBackColor = true;
+            radioButton擦.CheckedChanged += radioButton_Click;
             // 
             // radioButton圆
             // 
-            this.radioButton圆.AutoSize = true;
-            this.radioButton圆.Location = new System.Drawing.Point(8, 48);
-            this.radioButton圆.Name = "radioButton圆";
-            this.radioButton圆.Size = new System.Drawing.Size(41, 24);
-            this.radioButton圆.TabIndex = 4;
-            this.radioButton圆.Text = "圆";
-            this.radioButton圆.UseVisualStyleBackColor = true;
-            this.radioButton圆.CheckedChanged += new System.EventHandler(this.radioButton_Click);
+            radioButton圆.AutoSize = true;
+            radioButton圆.Location = new Point(163, 18);
+            radioButton圆.Name = "radioButton圆";
+            radioButton圆.Size = new Size(41, 24);
+            radioButton圆.TabIndex = 4;
+            radioButton圆.Text = "圆";
+            radioButton圆.UseVisualStyleBackColor = true;
+            radioButton圆.CheckedChanged += radioButton_Click;
             // 
             // radioButton矩形
             // 
-            this.radioButton矩形.AutoSize = true;
-            this.radioButton矩形.Location = new System.Drawing.Point(163, 18);
-            this.radioButton矩形.Name = "radioButton矩形";
-            this.radioButton矩形.Size = new System.Drawing.Size(55, 24);
-            this.radioButton矩形.TabIndex = 3;
-            this.radioButton矩形.Text = "矩形";
-            this.radioButton矩形.UseVisualStyleBackColor = true;
-            this.radioButton矩形.CheckedChanged += new System.EventHandler(this.radioButton_Click);
+            radioButton矩形.AutoSize = true;
+            radioButton矩形.Location = new Point(8, 45);
+            radioButton矩形.Name = "radioButton矩形";
+            radioButton矩形.Size = new Size(55, 24);
+            radioButton矩形.TabIndex = 3;
+            radioButton矩形.Text = "矩形";
+            radioButton矩形.UseVisualStyleBackColor = true;
+            radioButton矩形.CheckedChanged += radioButton_Click;
             // 
             // radioButton线
             // 
-            this.radioButton线.AutoSize = true;
-            this.radioButton线.Location = new System.Drawing.Point(116, 18);
-            this.radioButton线.Name = "radioButton线";
-            this.radioButton线.Size = new System.Drawing.Size(41, 24);
-            this.radioButton线.TabIndex = 2;
-            this.radioButton线.Text = "线";
-            this.radioButton线.UseVisualStyleBackColor = true;
-            this.radioButton线.CheckedChanged += new System.EventHandler(this.radioButton_Click);
+            radioButton线.AutoSize = true;
+            radioButton线.Location = new Point(116, 18);
+            radioButton线.Name = "radioButton线";
+            radioButton线.Size = new Size(41, 24);
+            radioButton线.TabIndex = 2;
+            radioButton线.Text = "线";
+            radioButton线.UseVisualStyleBackColor = true;
+            radioButton线.CheckedChanged += radioButton_Click;
             // 
             // radioButton点
             // 
-            this.radioButton点.AutoSize = true;
-            this.radioButton点.Location = new System.Drawing.Point(69, 18);
-            this.radioButton点.Name = "radioButton点";
-            this.radioButton点.Size = new System.Drawing.Size(41, 24);
-            this.radioButton点.TabIndex = 1;
-            this.radioButton点.Text = "点";
-            this.radioButton点.UseVisualStyleBackColor = true;
-            this.radioButton点.CheckedChanged += new System.EventHandler(this.radioButton_Click);
+            radioButton点.AutoSize = true;
+            radioButton点.Location = new Point(69, 18);
+            radioButton点.Name = "radioButton点";
+            radioButton点.Size = new Size(41, 24);
+            radioButton点.TabIndex = 1;
+            radioButton点.Text = "点";
+            radioButton点.UseVisualStyleBackColor = true;
+            radioButton点.CheckedChanged += radioButton_Click;
             // 
             // radioButton不画
             // 
-            this.radioButton不画.AutoSize = true;
-            this.radioButton不画.Checked = true;
-            this.radioButton不画.Location = new System.Drawing.Point(8, 18);
-            this.radioButton不画.Name = "radioButton不画";
-            this.radioButton不画.Size = new System.Drawing.Size(55, 24);
-            this.radioButton不画.TabIndex = 0;
-            this.radioButton不画.TabStop = true;
-            this.radioButton不画.Text = "不画";
-            this.radioButton不画.UseVisualStyleBackColor = true;
-            this.radioButton不画.CheckedChanged += new System.EventHandler(this.radioButton_Click);
+            radioButton不画.AutoSize = true;
+            radioButton不画.Checked = true;
+            radioButton不画.Location = new Point(8, 18);
+            radioButton不画.Name = "radioButton不画";
+            radioButton不画.Size = new Size(55, 24);
+            radioButton不画.TabIndex = 0;
+            radioButton不画.TabStop = true;
+            radioButton不画.Text = "不画";
+            radioButton不画.UseVisualStyleBackColor = true;
+            radioButton不画.CheckedChanged += radioButton_Click;
             // 
             // toolStrip3
             // 
-            this.toolStrip3.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip3.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.toolStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel3,
-            this.算子直径,
-            this.toolStripLabel7,
-            this.胀蚀阈值});
-            this.toolStrip3.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
-            this.toolStrip3.Location = new System.Drawing.Point(65, 77);
-            this.toolStrip3.Name = "toolStrip3";
-            this.toolStrip3.Size = new System.Drawing.Size(145, 23);
-            this.toolStrip3.TabIndex = 26;
-            this.toolStrip3.Text = "toolStrip3";
+            toolStrip3.Dock = DockStyle.None;
+            toolStrip3.Font = new Font("微软雅黑", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            toolStrip3.Items.AddRange(new ToolStripItem[] { toolStripLabel3, 算子直径, toolStripLabel7, 胀蚀阈值 });
+            toolStrip3.LayoutStyle = ToolStripLayoutStyle.Flow;
+            toolStrip3.Location = new Point(65, 77);
+            toolStrip3.Name = "toolStrip3";
+            toolStrip3.Size = new Size(145, 23);
+            toolStrip3.TabIndex = 26;
+            toolStrip3.Text = "toolStrip3";
             // 
             // toolStripLabel3
             // 
-            this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(37, 20);
-            this.toolStripLabel3.Text = "直径";
-            this.toolStripLabel3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolStripLabel3.ToolTipText = "二值算子直径";
+            toolStripLabel3.Name = "toolStripLabel3";
+            toolStripLabel3.Size = new Size(37, 20);
+            toolStripLabel3.Text = "直径";
+            toolStripLabel3.TextAlign = ContentAlignment.BottomCenter;
+            toolStripLabel3.ToolTipText = "二值算子直径";
             // 
             // 算子直径
             // 
-            this.算子直径.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.算子直径.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.算子直径.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.算子直径.MaxLength = 2;
-            this.算子直径.Name = "算子直径";
-            this.算子直径.Size = new System.Drawing.Size(24, 22);
-            this.算子直径.Text = "3";
-            this.算子直径.ToolTipText = "算子直径. 需为奇数, 最小为3";
-            this.算子直径.Validated += new System.EventHandler(this.算子直径_Validated);
+            算子直径.BorderStyle = BorderStyle.None;
+            算子直径.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            算子直径.ForeColor = SystemColors.ControlText;
+            算子直径.MaxLength = 2;
+            算子直径.Name = "算子直径";
+            算子直径.Size = new Size(24, 22);
+            算子直径.Text = "3";
+            算子直径.ToolTipText = "算子直径. 需为奇数, 最小为3";
+            算子直径.Validated += 算子直径_Validated;
             // 
             // toolStripLabel7
             // 
-            this.toolStripLabel7.Name = "toolStripLabel7";
-            this.toolStripLabel7.Size = new System.Drawing.Size(37, 20);
-            this.toolStripLabel7.Text = "阈值";
-            this.toolStripLabel7.ToolTipText = "阈值为1时为膨胀效果, 阈值为直径平方时为腐蚀效果. ";
+            toolStripLabel7.Name = "toolStripLabel7";
+            toolStripLabel7.Size = new Size(37, 20);
+            toolStripLabel7.Text = "阈值";
+            toolStripLabel7.ToolTipText = "阈值为1时为膨胀效果, 阈值为直径平方时为腐蚀效果. ";
             // 
             // 胀蚀阈值
             // 
-            this.胀蚀阈值.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.胀蚀阈值.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.胀蚀阈值.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.胀蚀阈值.MaxLength = 4;
-            this.胀蚀阈值.Name = "胀蚀阈值";
-            this.胀蚀阈值.Size = new System.Drawing.Size(42, 22);
-            this.胀蚀阈值.Text = "3";
-            this.胀蚀阈值.ToolTipText = "阈值最大值为直径的平方, 最小为1";
-            this.胀蚀阈值.Validated += new System.EventHandler(this.胀蚀阈值_TextChanged);
-            this.胀蚀阈值.TextChanged += new System.EventHandler(this.胀蚀阈值_TextChanged);
+            胀蚀阈值.BorderStyle = BorderStyle.None;
+            胀蚀阈值.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            胀蚀阈值.ForeColor = SystemColors.ControlText;
+            胀蚀阈值.MaxLength = 4;
+            胀蚀阈值.Name = "胀蚀阈值";
+            胀蚀阈值.Size = new Size(42, 22);
+            胀蚀阈值.Text = "3";
+            胀蚀阈值.ToolTipText = "阈值最大值为直径的平方, 最小为1";
+            胀蚀阈值.Validated += 胀蚀阈值_TextChanged;
+            胀蚀阈值.TextChanged += 胀蚀阈值_TextChanged;
             // 
             // toolStrip2
             // 
-            this.toolStrip2.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.下限标签,
-            this.H下,
-            this.toolStripSeparator7,
-            this.S下,
-            this.toolStripSeparator8,
-            this.L下});
-            this.toolStrip2.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
-            this.toolStrip2.Location = new System.Drawing.Point(65, 28);
-            this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(146, 23);
-            this.toolStrip2.TabIndex = 19;
-            this.toolStrip2.Text = "toolStrip2";
+            toolStrip2.Dock = DockStyle.None;
+            toolStrip2.Font = new Font("微软雅黑", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            toolStrip2.Items.AddRange(new ToolStripItem[] { 下限标签, H下, toolStripSeparator7, S下, toolStripSeparator8, L下 });
+            toolStrip2.LayoutStyle = ToolStripLayoutStyle.Flow;
+            toolStrip2.Location = new Point(65, 28);
+            toolStrip2.Name = "toolStrip2";
+            toolStrip2.Size = new Size(146, 23);
+            toolStrip2.TabIndex = 19;
+            toolStrip2.Text = "toolStrip2";
             // 
             // 下限标签
             // 
-            this.下限标签.Name = "下限标签";
-            this.下限标签.Size = new System.Drawing.Size(37, 20);
-            this.下限标签.Text = "下限";
-            this.下限标签.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.下限标签.ToolTipText = "HSL值下限. 用于标记背景和二值化";
+            下限标签.Name = "下限标签";
+            下限标签.Size = new Size(37, 20);
+            下限标签.Text = "下限";
+            下限标签.TextAlign = ContentAlignment.BottomCenter;
+            下限标签.ToolTipText = "HSL值下限. 用于标记背景和二值化";
             // 
             // H下
             // 
-            this.H下.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.H下.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.H下.ForeColor = System.Drawing.Color.Purple;
-            this.H下.MaxLength = 3;
-            this.H下.Name = "H下";
-            this.H下.Size = new System.Drawing.Size(30, 22);
-            this.H下.Text = "140";
-            this.H下.ToolTipText = "H色调下限";
-            this.H下.TextChanged += new System.EventHandler(this.HSL上下限_TextChanged);
+            H下.BorderStyle = BorderStyle.None;
+            H下.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            H下.ForeColor = Color.Purple;
+            H下.MaxLength = 3;
+            H下.Name = "H下";
+            H下.Size = new Size(30, 22);
+            H下.Text = "140";
+            H下.ToolTipText = "H色调下限";
+            H下.TextChanged += HSL上下限_TextChanged;
             // 
             // toolStripSeparator7
             // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 23);
+            toolStripSeparator7.Name = "toolStripSeparator7";
+            toolStripSeparator7.Size = new Size(6, 23);
             // 
             // S下
             // 
-            this.S下.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.S下.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.S下.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.S下.MaxLength = 3;
-            this.S下.Name = "S下";
-            this.S下.Size = new System.Drawing.Size(30, 22);
-            this.S下.Text = "0";
-            this.S下.ToolTipText = "S饱和度下限";
-            this.S下.TextChanged += new System.EventHandler(this.HSL上下限_TextChanged);
+            S下.BorderStyle = BorderStyle.None;
+            S下.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            S下.ForeColor = SystemColors.ControlDarkDark;
+            S下.MaxLength = 3;
+            S下.Name = "S下";
+            S下.Size = new Size(30, 22);
+            S下.Text = "0";
+            S下.ToolTipText = "S饱和度下限";
+            S下.TextChanged += HSL上下限_TextChanged;
             // 
             // toolStripSeparator8
             // 
-            this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 23);
+            toolStripSeparator8.Name = "toolStripSeparator8";
+            toolStripSeparator8.Size = new Size(6, 23);
             // 
             // L下
             // 
-            this.L下.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.L下.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.L下.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.L下.MaxLength = 3;
-            this.L下.Name = "L下";
-            this.L下.Size = new System.Drawing.Size(30, 22);
-            this.L下.Text = "0";
-            this.L下.ToolTipText = "L亮度值下限";
-            this.L下.TextChanged += new System.EventHandler(this.HSL上下限_TextChanged);
+            L下.BorderStyle = BorderStyle.None;
+            L下.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            L下.ForeColor = SystemColors.ControlText;
+            L下.MaxLength = 3;
+            L下.Name = "L下";
+            L下.Size = new Size(30, 22);
+            L下.Text = "0";
+            L下.ToolTipText = "L亮度值下限";
+            L下.TextChanged += HSL上下限_TextChanged;
             // 
             // toolStrip1
             // 
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.上限标签,
-            this.H上,
-            this.toolStripSeparator5,
-            this.S上,
-            this.toolStripSeparator6,
-            this.L上});
-            this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
-            this.toolStrip1.Location = new System.Drawing.Point(65, 2);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(146, 23);
-            this.toolStrip1.TabIndex = 18;
-            this.toolStrip1.Text = "toolStrip1";
+            toolStrip1.Dock = DockStyle.None;
+            toolStrip1.Font = new Font("微软雅黑", 10.5F, FontStyle.Regular, GraphicsUnit.Point);
+            toolStrip1.Items.AddRange(new ToolStripItem[] { 上限标签, H上, toolStripSeparator5, S上, toolStripSeparator6, L上 });
+            toolStrip1.LayoutStyle = ToolStripLayoutStyle.Flow;
+            toolStrip1.Location = new Point(65, 2);
+            toolStrip1.Name = "toolStrip1";
+            toolStrip1.Size = new Size(146, 23);
+            toolStrip1.TabIndex = 18;
+            toolStrip1.Text = "toolStrip1";
             // 
             // 上限标签
             // 
-            this.上限标签.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.上限标签.Name = "上限标签";
-            this.上限标签.Size = new System.Drawing.Size(37, 20);
-            this.上限标签.Text = "上限";
-            this.上限标签.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.上限标签.ToolTipText = "HSL值上限. 用于标记背景和二值化";
+            上限标签.ForeColor = SystemColors.ControlText;
+            上限标签.Name = "上限标签";
+            上限标签.Size = new Size(37, 20);
+            上限标签.Text = "上限";
+            上限标签.TextAlign = ContentAlignment.BottomCenter;
+            上限标签.ToolTipText = "HSL值上限. 用于标记背景和二值化";
             // 
             // H上
             // 
-            this.H上.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.H上.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.H上.ForeColor = System.Drawing.Color.Purple;
-            this.H上.MaxLength = 3;
-            this.H上.Name = "H上";
-            this.H上.Size = new System.Drawing.Size(30, 22);
-            this.H上.Text = "160";
-            this.H上.ToolTipText = "H色调上限";
-            this.H上.TextChanged += new System.EventHandler(this.HSL上下限_TextChanged);
+            H上.BorderStyle = BorderStyle.None;
+            H上.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            H上.ForeColor = Color.Purple;
+            H上.MaxLength = 3;
+            H上.Name = "H上";
+            H上.Size = new Size(30, 22);
+            H上.Text = "160";
+            H上.ToolTipText = "H色调上限";
+            H上.TextChanged += HSL上下限_TextChanged;
             // 
             // toolStripSeparator5
             // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 23);
+            toolStripSeparator5.Name = "toolStripSeparator5";
+            toolStripSeparator5.Size = new Size(6, 23);
             // 
             // S上
             // 
-            this.S上.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.S上.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.S上.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.S上.MaxLength = 3;
-            this.S上.Name = "S上";
-            this.S上.Size = new System.Drawing.Size(30, 22);
-            this.S上.Text = "240";
-            this.S上.ToolTipText = "S饱和度上限";
-            this.S上.TextChanged += new System.EventHandler(this.HSL上下限_TextChanged);
+            S上.BorderStyle = BorderStyle.None;
+            S上.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            S上.ForeColor = SystemColors.ControlDarkDark;
+            S上.MaxLength = 3;
+            S上.Name = "S上";
+            S上.Size = new Size(30, 22);
+            S上.Text = "240";
+            S上.ToolTipText = "S饱和度上限";
+            S上.TextChanged += HSL上下限_TextChanged;
             // 
             // toolStripSeparator6
             // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 23);
+            toolStripSeparator6.Name = "toolStripSeparator6";
+            toolStripSeparator6.Size = new Size(6, 23);
             // 
             // L上
             // 
-            this.L上.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.L上.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.L上.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.L上.MaxLength = 3;
-            this.L上.Name = "L上";
-            this.L上.Size = new System.Drawing.Size(30, 22);
-            this.L上.Text = "240";
-            this.L上.ToolTipText = "L亮度值上限";
-            this.L上.TextChanged += new System.EventHandler(this.HSL上下限_TextChanged);
+            L上.BorderStyle = BorderStyle.None;
+            L上.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            L上.ForeColor = SystemColors.ControlText;
+            L上.MaxLength = 3;
+            L上.Name = "L上";
+            L上.Size = new Size(30, 22);
+            L上.Text = "240";
+            L上.ToolTipText = "L亮度值上限";
+            L上.TextChanged += HSL上下限_TextChanged;
             // 
             // 功能标签页
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.切换工具栏);
-            this.Controls.Add(this.神经网络panel);
-            this.Name = "功能标签页";
-            this.Size = new System.Drawing.Size(1289, 512);
-            this.toolTip1.SetToolTip(this, " ");
-            this.切换工具栏.ResumeLayout(false);
-            this.切换工具栏.PerformLayout();
-            this.点运算参数.ResumeLayout(false);
-            this.点运算参数.PerformLayout();
-            this.增益参数.ResumeLayout(false);
-            this.增益参数.PerformLayout();
-            this.RGB参数.ResumeLayout(false);
-            this.RGB参数.PerformLayout();
-            this.宽高参数.ResumeLayout(false);
-            this.宽高参数.PerformLayout();
-            this.神经网络panel.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.toolStrip3.ResumeLayout(false);
-            this.toolStrip3.PerformLayout();
-            this.toolStrip2.ResumeLayout(false);
-            this.toolStrip2.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
+            Controls.Add(panel1);
+            Controls.Add(切换工具栏);
+            Controls.Add(神经网络panel);
+            Name = "功能标签页";
+            Size = new Size(1289, 512);
+            toolTip1.SetToolTip(this, " ");
+            切换工具栏.ResumeLayout(false);
+            切换工具栏.PerformLayout();
+            点运算参数.ResumeLayout(false);
+            点运算参数.PerformLayout();
+            增益参数.ResumeLayout(false);
+            增益参数.PerformLayout();
+            RGB参数.ResumeLayout(false);
+            RGB参数.PerformLayout();
+            宽高参数.ResumeLayout(false);
+            宽高参数.PerformLayout();
+            神经网络panel.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            toolStrip3.ResumeLayout(false);
+            toolStrip3.PerformLayout();
+            toolStrip2.ResumeLayout(false);
+            toolStrip2.PerformLayout();
+            toolStrip1.ResumeLayout(false);
+            toolStrip1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -1329,8 +1287,9 @@ namespace 控件 {
         private Button R转H按钮;
         private Button H转R按钮;
         private Button 测试按钮;
-        private CheckBox 显示细线;
+        private CheckBox 显示边线;
         private Button 数点按钮;
         private CheckBox 黑掉背景;
+        private TextBox 笔粗细;
     }
 }

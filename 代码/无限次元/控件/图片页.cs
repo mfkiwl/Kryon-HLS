@@ -1,5 +1,6 @@
 ﻿global using 图像处理;
 using System.Drawing.Imaging;
+using System.Numerics;
 
 namespace 控件;
 
@@ -10,37 +11,24 @@ public class 图片页 : TabPage, I标签页 {
     public PictureBox 图片框;
     PictureBox 缩略图框;          //用于放大模式下显示和设置放大区域
     public 图片数据 图数据;
-    public string 文件名;
-    public string 无路径文件名;
-    public string 文件信息;
+    public string 文件名, 无路径文件名, 文件信息;
     public ImageFormat 图片格式;
     static public 局部放大图 局部放大控件;
     static public 功能标签页 功能页;
     public Rectangle 选中区域 = Rectangle.Empty;
-    private Bitmap 位图副本;
+    private Bitmap 位图副本, 线段索引图;
     Graphics g位图副本;
     Bitmap 放大图;
-    Point 局部中心;
     public float 缩放比例 = 1;
-    public bool 显示网格 = false;
-    Rectangle 原图局部框;
-    Point 右键按下点;
+    public bool 显示网格 = false, 拖动中 = false;
     double 缩略比 = 0;
-    bool 拖动中 = false;
 
     static public string 画啥 = "不画";
-    List<(Point 起, Point 终)> 线记录 = new List<(Point 起, Point 终)>();
-    Rectangle 虚线框 = Rectangle.Empty;
-    Rectangle 上个虚线框 = Rectangle.Empty;
-    Rectangle 矩形框 = Rectangle.Empty;
-    Point 按下起始点, 上个点, 起点, 终点, 原图坐标, 按下点, 上个原图坐标;
+    Rectangle 虚线框 = Rectangle.Empty, 上个虚线框 = Rectangle.Empty, 矩形框 = Rectangle.Empty, 原图局部框;
+    Point 按下起始点, 上个点, 起点, 终点, 原图坐标, 按下点, 上个原图坐标, 局部中心, 右键按下点;
     int 彩线计数;
     Graphics g原图;
-    double[,] 梯度数组, 角度数组;
-    //short[,] 横边, 纵边;
-    //灰矢[][] 横矢表, 纵矢表;
-    int 波形半长 = 51;
-
+    线段信息 [] 线段组;
     public 图片页(Bitmap 位图, string 图片文件名, ContextMenuStrip 右键菜单, PictureBox 缩略图框, ImageFormat 格式 = null) {
         this.缩略图框 = 缩略图框;
         图数据 = new(位图);
@@ -105,15 +93,24 @@ public class 图片页 : TabPage, I标签页 {
         Text = 无路径文件名;
         文件信息 = 图数据.位图.Width + " x " + 图数据.位图.Height + "  " + 文件大小 + "  像素格式: " + 图数据.位图.PixelFormat.ToString()[6..] + "   " + 文件名;
         图片格式 = 格式;
-
     }
 
     public void 更新信息() {
         获取文件信息(文件名, 图片格式);
     }
 
-    public void 清空放大图细线() {
-        线记录.Clear();
+    public void 加载线段数据(string 文件名) {
+        using var 流 = File.OpenRead(文件名);
+        if (流.Length % 16 != 0) { MessageBox.Show("读线段数据出错!"); return; }
+        线段组 = new 线段信息[流.Length / 16];
+        using var 读 = new BinaryReader(流);
+        for (int i = 0; i < 线段组.Length; i++) {
+            线段组[i].起.X = 读.ReadSingle();
+            线段组[i].起.Y = 读.ReadSingle();
+            线段组[i].终.X = 读.ReadSingle();
+            线段组[i].终.Y = 读.ReadSingle();
+        }
+        文件信息 += "  已加载线段数据" + 线段组.Length + "条";
     }
 
     #region 鼠标事件
@@ -124,18 +121,6 @@ public class 图片页 : TabPage, I标签页 {
         原图坐标 = new((int)(e.Location.X / 缩放比例), (int)(e.Location.Y / 缩放比例));   //这个e.Location是相对于图片框的坐标
         PointF 左上 = new PointF(原图坐标.X * 缩放比例, 原图坐标.Y * 缩放比例);
         if (缩放比例 > 1) { 原图坐标.X += 原图局部框.X; 原图坐标.Y += 原图局部框.Y; }
-        Color 颜色 = 画啥 == "擦" ? Color.Black : Color.White;
-        Pen 笔 = new Pen(颜色, 1);
-        if ((画啥 == "点" || 画啥 == "擦")) {
-            图数据.位图.SetPixel(原图坐标.X, 原图坐标.Y, 颜色);
-            刷新();
-        }
-        //if (画啥 == "不画" && 参数.显示RGB.T) {
-        //    float 中心x = 左上.X + 缩放比例 / 2, 中心y = 左上.Y + 缩放比例 / 2;
-        //    using Graphics g = Graphics.FromImage(放大图);
-        //    g.DrawLine(new Pen(new SolidBrush(Color.Green)), 中心x, 中心y, (float)(中心x + 30 * 缩放比例 * Math.Cos(角度数组[原图坐标.Y, 原图坐标.X])), (float)(中心y + 30 * 缩放比例 * Math.Sin(角度数组[原图坐标.Y, 原图坐标.X])));
-        //    图片框.Refresh();
-        //}//画表示该点梯度方向的长线
     }
     public void 缩略图框_MouseMove(object sender, MouseEventArgs e) {
         if (缩略图框.Visible == false || ((TabControl)Parent).SelectedTab != this) return;
@@ -151,8 +136,20 @@ public class 图片页 : TabPage, I标签页 {
         原图坐标 = new((int)(e.Location.X / 缩放比例), (int)(e.Location.Y / 缩放比例));   //这个e.Location是相对于图片框的坐标
         if (缩放比例 > 1) { 原图坐标.X += 原图局部框.X; 原图坐标.Y += 原图局部框.Y; }
         右键按下点 = 原图坐标;
+        using Graphics g图片框 = 图片框.CreateGraphics();
+
         if (!(缩放比例 > 1 && e.Button == MouseButtons.Left))
             局部放大控件.显示像素信息(图数据.位图, 原图坐标, e.Button == MouseButtons.Left);
+
+        if (缩放比例 > 1 && 参数.显示.ALSD && 线段索引图 != null && 线段组 != null) {
+            int i = 线段索引图.GetPixel(e.Location.X, e.Location.Y).ToArgb() & 0x00ffffff;
+            if (i > 0) {
+                线段信息 线 = 线段组[i];
+                PointF 位置 = new(700, 10);
+                图片框.Refresh();
+                g图片框.DrawString("起点: " + 线.起 + " 终点: " + 线.终, 绘图.TNR字体(20), new SolidBrush(Color.YellowGreen), 位置);
+            }
+        }//有线段数据时,鼠标移动到线段上显示线段起终点数据.
 
         if (e.Button == MouseButtons.Right) {
             虚线框 = new Rectangle(Math.Min(按下起始点.X, Cursor.Position.X), Math.Min(按下起始点.Y, Cursor.Position.Y), Math.Abs(按下起始点.X - Cursor.Position.X), Math.Abs(按下起始点.Y - Cursor.Position.Y));
@@ -163,8 +160,8 @@ public class 图片页 : TabPage, I标签页 {
 
         if (e.Button == MouseButtons.Left && 画啥 == "不画") {
             if (缩放比例 <= 1) {
-                using (Graphics g图片框 = 图片框.CreateGraphics())
-                    g图片框.DrawLine(new Pen(图像.色谱颜色24[彩线计数++ % 图像.色谱颜色24.Length]), 上个点, e.Location);
+
+                g图片框.DrawLine(new Pen(图像.色谱颜色24[彩线计数++ % 图像.色谱颜色24.Length]), 上个点, e.Location);
                 上个点 = e.Location;
                 功能页.更新HSL上下限(局部放大控件.HSL上限, 局部放大控件.HSL下限);
             }//按下左键拖动时画彩线
@@ -182,36 +179,32 @@ public class 图片页 : TabPage, I标签页 {
         }
         if (e.Button == MouseButtons.Left && 画啥 != "不画") {
             终点 = 原图坐标;
-            Rectangle 略大框 = new Rectangle(矩形框.X - 1, 矩形框.Y - 1, 矩形框.Width + 1 + 1, 矩形框.Height + 1 + 1);//擦的框要比上次画的大一圈
+            Rectangle 略大框 = new Rectangle(矩形框.X - 参数.笔粗细, 矩形框.Y - 参数.笔粗细, 矩形框.Width + 1 + 参数.笔粗细 * 2, 矩形框.Height + 1 + 参数.笔粗细 * 2);//擦的框要比上次画的大一圈
             矩形框 = new Rectangle(Math.Min(按下点.X, 原图坐标.X), Math.Min(按下点.Y, 原图坐标.Y), Math.Abs(按下点.X - 原图坐标.X), Math.Abs(按下点.Y - 原图坐标.Y));
 
             Color 颜色 = 画啥 == "擦" ? Color.Black : Color.White;
             颜色 = 画啥 == "画框擦" ? Color.Gray : 颜色;
-            Pen 笔 = new Pen(颜色, 1);
-            Pen 笔擦框 = new Pen(颜色, 1);
+            Pen 笔 = new(颜色, 参数.笔粗细);
+            Pen 笔擦框 = new(颜色, 1);
 
-            if (画啥 == "点" || 画啥 == "擦") 
+            if (画啥 == "点" || 画啥 == "擦") {
                 g原图.DrawLine(笔, 起点, 终点);
-            else {
+                g原图.FillEllipse(new SolidBrush(颜色), 终点.X - 参数.笔粗细 / 2f, 终点.Y - 参数.笔粗细 / 2f, 参数.笔粗细, 参数.笔粗细);
+            } else {
                 g原图.DrawImage(位图副本, 略大框, 略大框, GraphicsUnit.Pixel); //把上次画的框擦掉,这个步骤是关键.
-                if(线记录.Count > 0) 线记录.RemoveAt(线记录.Count - 1);
                 if (画啥 == "线") {
                     g原图.DrawLine(笔, 按下点, 原图坐标);
-                    线记录.Add((按下点, 原图坐标));
-                }
-                else if (画啥 == "矩形") {
+                } else if (画啥 == "矩形") {
                     if ((Control.ModifierKeys & Keys.Shift) == Keys.Shift) //按下shfit画正方形
                         矩形框 = new Rectangle(矩形框.X, 矩形框.Y, Math.Max(矩形框.Width, 矩形框.Height), Math.Max(矩形框.Width, 矩形框.Height));
                     g原图.DrawRectangle(笔, 矩形框);
                     图数据.位图.SetPixel(矩形框.X + 矩形框.Width / 2, 矩形框.Y + 矩形框.Height / 2, Color.Red);
-                }
-                else if (画啥 == "圆") {
+                } else if (画啥 == "圆") {
                     if ((Control.ModifierKeys & Keys.Shift) == Keys.Shift)
                         矩形框 = new Rectangle(矩形框.X, 矩形框.Y, Math.Max(矩形框.Width, 矩形框.Height), Math.Max(矩形框.Width, 矩形框.Height));
                     g原图.DrawEllipse(笔, 矩形框);
                     图数据.位图.SetPixel(矩形框.X + 矩形框.Width / 2, 矩形框.Y + 矩形框.Height / 2, Color.Red);
-                }
-                else if (画啥 == "画框擦")
+                } else if (画啥 == "画框擦")
                     g原图.DrawRectangle(笔擦框, 矩形框);
             }
             刷新();
@@ -233,7 +226,6 @@ public class 图片页 : TabPage, I标签页 {
             g原图.FillRectangle(Brushes.Black, 矩形框.X, 矩形框.Y, 矩形框.Width + 1, 矩形框.Height + 1);
             刷新();
         }
-        if (e.Button == MouseButtons.Left && 画啥 == "线") 线记录.Add(线记录.Last());
         Cursor.Clip = Rectangle.Empty;
     }
 
@@ -332,7 +324,7 @@ public class 图片页 : TabPage, I标签页 {
 
     private void 进入放大模式() {
         AutoScroll = false;  //放大模式下也没有滚动条,靠按住鼠标左键来拖动画面
-        if (放大图 == null) 放大图 = new(Width, Height, PixelFormat.Format24bppRgb);
+        放大图 ??= new(Width, Height, PixelFormat.Format24bppRgb);
         图片框.SizeMode = PictureBoxSizeMode.AutoSize;
         图片框.Image = 放大图;
         显示缩略图();
@@ -390,7 +382,7 @@ public class 图片页 : TabPage, I标签页 {
             放大图.UnlockBits(放大图数据);
         }
         图数据.位图.UnlockBits(位图数据);
-
+        显示二值边线(g);
         if (显示网格) {
             Pen 网格笔 = new(Color.Gray);
             float[] 虚线样式 = new float[] { 1f, 2f };
@@ -409,7 +401,24 @@ public class 图片页 : TabPage, I标签页 {
 
     }//只把显示区域能装下的原图局部拿出来放大显示了.
 
+    private void 显示二值边线(Graphics g) {
+        if (!参数.显示.ALSD) return;
+        if (线段组 == null) { MessageBox.Show("此图还没加载线段数据!"); return; }
+        线段索引图 ??= new(Width, Height, PixelFormat.Format32bppArgb);
+        using Graphics g索引 = Graphics.FromImage(线段索引图);
+        g索引.Clear(Color.Transparent);
+        for (int i = 1; i < 线段组.Length; i++) {
+            if (线段组[i].终 == Vector2.Zero && 线段组[i].起 == Vector2.Zero) break;
+            if (!图像.点在框内(线段组[i].终, 原图局部框) && !图像.点在框内(线段组[i].起, 原图局部框)) continue;
+            Color 颜色 = i % 2 == 0 ? Color.Red : Color.Green;
+            PointF 起点 = new((线段组[i].起.X - 原图局部框.Left) * 缩放比例 + 缩放比例 / 2f, (线段组[i].起.Y - 原图局部框.Top) * 缩放比例 + 缩放比例 / 2f);
+            PointF 终点 = new((线段组[i].终.X - 原图局部框.Left) * 缩放比例 + 缩放比例 / 2f, (线段组[i].终.Y - 原图局部框.Top) * 缩放比例 + 缩放比例 / 2f);
+            g.DrawLine(new Pen(颜色, 3), 起点, 终点);
+            g索引.DrawLine(new Pen(Color.FromArgb(255, Color.FromArgb(i)), 5), 起点, 终点);
+        }
 
+
+    }
     private void 获取局部中心点坐标() {
         int 右 = Math.Min(Size.Width, 图数据.位图.Width);
         int 下 = Math.Min(Size.Height, 图数据.位图.Height);//图片比显示区域小时,右下坐标取图片的右下点.

@@ -28,7 +28,7 @@ public partial class 功能标签页 : UserControl {
         初始化();
     }
 
-    
+
     private void 初始化() {
         图像处理控件 = new Control[panel1.Controls.Count];
         panel1.Controls.CopyTo(图像处理控件, 0);
@@ -37,11 +37,11 @@ public partial class 功能标签页 : UserControl {
         控件切换表.Add(图像处理按钮, 图像处理控件);
         控件切换表.Add(神经网络按钮, 神经网络控件);
         设置上下限标签颜色();
-        画啥按钮点击?.Invoke(radioButton不画, new EventArgs()) ;
+        画啥按钮点击?.Invoke(radioButton不画, new EventArgs());
     }
 
     public void 取消画图() {
-        radioButton不画.Checked = true; 
+        radioButton不画.Checked = true;
     }
     public void 更新HSL上下限(Color HSL上限, Color HSL下限) {
         (H上.Text, S上.Text, L上.Text) = (HSL上限.R.ToString(), HSL上限.G.ToString(), HSL上限.B.ToString());
@@ -59,10 +59,9 @@ public partial class 功能标签页 : UserControl {
             H = Convert.ToByte(H下.Text);
             图像.HSL转RGB(H, S, L, ref R, ref G, ref B);
             下限标签.ForeColor = Color.FromArgb(R, G, B);
+        } catch (Exception) {
         }
-        catch (Exception) {
-        }
-        
+
     }
 
     private void 读参数() {
@@ -78,14 +77,13 @@ public partial class 功能标签页 : UserControl {
             参数.胀蚀阈值 = Convert.ToInt32(胀蚀阈值.Text);
             if (参数.胀蚀阈值 == 0) { 参数.胀蚀阈值 = 1; 胀蚀阈值.Text = "1"; }
             if (参数.胀蚀阈值 > 参数.算子直径 * 参数.算子直径) { 参数.胀蚀阈值 = 参数.算子直径 * 参数.算子直径; 胀蚀阈值.Text = 参数.胀蚀阈值.ToString(); }
-          
-        }
-        catch (Exception exp) {
+
+        } catch (Exception exp) {
             MessageBox.Show(exp.Message + "\n刚才的值设的有问题!");
         }
     }
 
-    public void 设置颜色(Color 颜色){
+    public void 设置颜色(Color 颜色) {
         (R值.Text, G值.Text, B值.Text) = (颜色.R.ToString(), 颜色.G.ToString(), 颜色.B.ToString());
     }
 
@@ -94,7 +92,14 @@ public partial class 功能标签页 : UserControl {
         读参数();
         图像处理按钮点击?.Invoke(sender, e);
     }
-
+    private void 笔粗细_TextChanged(object sender, EventArgs e) {
+        if (笔粗细.Text.Length == 0) return;
+        try {
+            参数.笔粗细 = Convert.ToInt32(笔粗细.Text);
+        } catch (Exception exp) {
+            MessageBox.Show(exp.Message + "\n刚才的值设的有问题!");
+        }
+    }
     private void 神经网络按钮们_Click(object sender, EventArgs e) {
         神经网络按钮点击?.Invoke(sender, e);
     }
@@ -104,7 +109,7 @@ public partial class 功能标签页 : UserControl {
     }
     private void 显示RGB_CheckedChanged(object sender, EventArgs e) {
         CheckBox checkBox = (CheckBox)sender;
-        if (checkBox.Name == "显示细线") 参数.显示.线 = checkBox.Checked;
+        if (checkBox.Name == "显示边线") 参数.显示.ALSD = checkBox.Checked;
         else if (checkBox.Name == "黑掉背景") 参数.显示.黑 = checkBox.Checked;
         读参数();
         显示RGB点击?.Invoke(sender, e);
@@ -116,10 +121,10 @@ public partial class 功能标签页 : UserControl {
             button.Font = new Font(button.Font.FontFamily, button.Font.Size, FontStyle.Regular);
         }//先把所有的变为没加粗
         ToolStripButton 按钮 = (ToolStripButton)sender;
-        按钮.Font = new Font(按钮.Font.FontFamily,按钮.Font.Size,FontStyle.Bold);//再把被点击的变为粗体
+        按钮.Font = new Font(按钮.Font.FontFamily, 按钮.Font.Size, FontStyle.Bold);//再把被点击的变为粗体
         panel1.Controls.Clear();
         panel1.Controls.AddRange(控件切换表[按钮]);
-        
+
     }
 
     private void 位宽选择_Click(object sender, EventArgs e) {
@@ -165,7 +170,7 @@ public partial class 功能标签页 : UserControl {
     private void 算子直径_Validated(object sender, EventArgs e) {
         算子直径.Text = 限制字符为正整数(算子直径.Text, 99);
         int 直径;
-        if (int.TryParse(算子直径.Text, out 直径)){
+        if (int.TryParse(算子直径.Text, out 直径)) {
             if (直径 < 3) 直径 = 3;
             if (直径 % 2 == 0) 直径++;
             算子直径.Text = 直径.ToString();
@@ -178,8 +183,8 @@ public partial class 功能标签页 : UserControl {
         参数.L使能 = L使能.Checked;
     }
 
-    
-       
+
+
     //無限次元:https://space.bilibili.com/2139404925
     //本代码来自:https://github.com/becomequantum/Kryon
     #endregion
@@ -199,6 +204,8 @@ public partial class 功能标签页 : UserControl {
     private void B比例_MouseLeave(object sender, EventArgs e) {
         读参数();
     }
+
+
 }
 
 
